@@ -7,9 +7,8 @@ class Text:
             self.linedicts = {}
             self.tokens = tokenize.generate_tokens(f.readline)
             for tok in self.tokens:
-                if tok[0] == 0:
-                    # This is the EOF token, we skip it, continue instead of break
-                    # so that we aren't dependent on eating the tokens in order
+                if tok[0] != 1:
+                    # We only care about type=1 (NAME)
                     continue
                 lineno = tok[2][0]
                 if lineno in self.linedicts:

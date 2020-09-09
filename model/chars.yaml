@@ -1,0 +1,29 @@
+vowels:
+  - a
+  - e
+  - i
+  - o
+  - u
+consonants:
+  - b
+  - c
+  - d
+  - f
+  - g
+  - h
+  - j
+  - k
+  - l
+  - m
+  - n
+  - p
+  - q
+  - v
+  - x
+diphthongs:
+  - ae
+  - oe
+  - au
+  - ei
+  - eu
+  - ui
