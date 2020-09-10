@@ -23,8 +23,8 @@ class Word:
     def __init__(self, chars):
         self.chars = chars
         self.vsp = re.compile(
-            '[{}]?[{}](([{}])*(?![{}]))?'.format(
-                CONSONANTS, VOWELS, CONSONANTS, VOWELS),
+            '((?<=\A)[{}]*)?[{}]?[{}](([{}])*(?![{}]))?'.format(
+                CONSONANTS, CONSONANTS, VOWELS, CONSONANTS, VOWELS),
             flags=re.IGNORECASE)
 
     # TODO: handle diphthongs

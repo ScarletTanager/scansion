@@ -1,0 +1,15 @@
+authors:
+  - name: Gaius Valerius Catullus
+    known_as: Catullus
+    index: 472
+    works:
+      - name: Carmina
+        index: 1
+        first: 0
+        last: 116
+  - name: Marcus Tullius Cicero
+    known_as: Cicero
+    index: 474
+  - name: Quintus Horatius Flaccus
+    known_as: Horace
+    index: 893
