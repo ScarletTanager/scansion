@@ -42,6 +42,14 @@ class WordWithDiphthongTestCase(unittest.TestCase):
         self.assertEqual(len(self.word.to_syllables()), 2)
 
 
+class WordWithQUTestCase(unittest.TestCase):
+    def setUp(self):
+        self.word = syllable.Word('qua')
+
+    def test_to_syllables(self):
+        self.assertEqual(len(self.word.to_syllables()), 1)
+
+
 class DefaultSyllableTestCase(unittest.TestCase):
     def setUp(self):
         self.syl = syllable.Syllable('ten')
