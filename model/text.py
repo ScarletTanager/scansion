@@ -5,6 +5,7 @@ import os
 import re
 from html.parser import HTMLParser
 from cos import CloudObjectStorage
+from datetime import date
 
 PACKHUM_URL = 'https://latin.packhum.org/dx/text/{}/{}/{}'
 ROMAN_NUM = '(?<=\n)[CDILMVX]+(?=\n)'
@@ -90,8 +91,8 @@ def get_text(author, work, chapter):
 
 
 def upload_text(text, name,
-                cos_endpoint, instance_id, bucket_name,
-                iam_endpoint, api_key):
+                cos, bucket_name,
+                api_key):
     # Write to a temp file
     tmp_file = os.path.join('/tmp', name)
     with open(tmp_file, 'w') as f:
@@ -166,19 +167,29 @@ def main():
     text = get_text(author_index, work_index, chapter_index)
 
     if cos_endpoint:
-        upload_text(
-            text=text,
-            name='-'.join([author_index, work_index, chapter_index]) + '.text',
-            cos_endpoint=cos_endpoint,
+        cos = CloudObjectStorage(
+            api_key=api_key,
             instance_id=cos_instance_id,
-            bucket_name=bucket,
             iam_endpoint=iam_endpoint,
-            api_key=api_key)
-    else:
-        text.print()
+            cos_endpoint=cos_endpoint)
+        )
+            upload_text(
+        text = text,
+        name = '-'.join([
+                date.today().isoformat(),
+                author_index,
+                work_index,
+                chapter_index]) + '.text',
+        cos_endpoint = cos_endpoint,
+        instance_id = cos_instance_id,
+        bucket_name = bucket,
+        iam_endpoint = iam_endpoint,
+        api_key = api_key)
+            else:
+            text.print()
 
-    return 0
+            return 0
 
 
-if __name__ == "__main__":
-    exit(main())
+            if __name__ == "__main__":
+            exit(main())

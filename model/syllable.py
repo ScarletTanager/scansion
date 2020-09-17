@@ -26,8 +26,8 @@ class Word:
     def __init__(self, chars):
         self.chars = chars
         self.vsp = re.compile(
-            '((?<=\A)[{}]*)?[{}]?[{}](([{}])*(?![{}]))?'.format(
-                CONSONANTS, CONSONANTS, VOWELS, CONSONANTS, VOWELS),
+            '((?<=\A)[{}]*)?[{}]?({}|[{}])(([{}])*(?![{}]))?'.format(
+                CONSONANTS, CONSONANTS, '|'.join(DIPTHONGS), VOWELS, CONSONANTS, VOWELS),
             flags=re.IGNORECASE)
 
     # TODO: handle diphthongs
@@ -75,6 +75,8 @@ class Syllable:
     def __init__(self, chars):
         self.chars = chars[:]
         self.slots = []
+        self.final = False
+        self.initial = False
         for c in self.chars:
             if c in VOWELS:
                 self.slots.append('V')
@@ -97,6 +99,12 @@ class Syllable:
             self.initial = False
         else:
             self.initial = True
+
+    def is_final(self):
+        return self.final
+
+    def is_initial(self):
+        return self.initial
 
     def print(self):
         print(self.chars)
