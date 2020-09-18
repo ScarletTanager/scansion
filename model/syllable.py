@@ -59,27 +59,22 @@ class SyllabifiedLine:
     def syllable_count(self):
         return len(self.syllables)
 
-    # scan_for_meta scans the line for the syllable metadata and marks each
-    # syllable accordingly
-    # def scan_for_meta(self):
-
     def print(self):
-        for syl in self.syllables:
-            print('{:<5} '.format(syl.chars), end='')
-        print('\n')
-        for syl in self.syllables:
-            print('{:<5} '.format(''.join(syl.slots)), end='')
-        print('\n')
-        for syl in self.syllables:
-            print('{:<2} {:<2} '.format(
+        print(self.string())
+
+    def string(self):
+        return '\n'.join([
+            ' '.join('{:<5}'.format(syl.chars) for syl in self.syllables),
+            ' '.join('{:<5}'.format(''.join(syl.slots))
+                     for syl in self.syllables),
+            ' '.join('{:<2} {:<2}'.format(
                 'I' if syl.is_initial() else '',
                 'F' if syl.is_final() else ''
-            ), end='')
-        print('\n')
-        for syl in self.syllables:
-            print('  {:<1} {:<1} '.format(
-                syl.nucleus_weight(), syl.coda_weight()), end='')
-        print('\n')
+                ) for syl in self.syllables),
+            ' '.join('{:>3} {:<1}'.format(
+                syl.nucleus_weight(), syl.coda_weight()
+                ) for syl in self.syllables)
+        ]) + '\n'
 
 
 class Syllable:

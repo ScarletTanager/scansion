@@ -3,12 +3,12 @@ FROM python:latest
 RUN mkdir -p /scansion/scripts
 RUN mkdir -p /scansion/model
 
-COPY scripts/process_text.py /scansion/scripts/.
+COPY scripts/process_syllables.py /scansion/scripts/.
 COPY scripts/paths.py /scansion/scripts/.
 COPY model/cos.py /scansion/model/.
-COPY model/text.py /scansion/model/.
+COPY model/syllable.py /scansion/model/.
 
 RUN /usr/local/bin/python -m pip install requests
 RUN /usr/local/bin/python -m pip install ibm-cos-sdk
 
-CMD ["/usr/local/bin/python","/script/text.py","-a","472","-w","1","-c", "1"]
+CMD ["/usr/local/bin/python","/scripts/process_syllables.py"]
