@@ -1,64 +1,36 @@
 import requests
 import argparse
 import os
-import re
-from html.parser import HTMLParser
 from datetime import date
 import paths
 
-PACKHUM_URL = 'https://latin.packhum.org/dx/text/{}/{}/{}'
-ROMAN_NUM = '(?<=\n)[CDILMVX]+(?=\n)'
-WORK_NUM = '(?<=\n)[\d\.]+(?=\n)'
-WORK_LINE = '[a-z][a-z\?\.\,\!\;\:]*'
-
-
-class PackhumHTMLParser(HTMLParser):
-    def init_regex(self):
-        self.lines = []
-        self.current_line = 0
-        self.rnp = re.compile(ROMAN_NUM)
-        self.wnp = re.compile(WORK_NUM)
-        self.wlp = re.compile(WORK_LINE)
-        self.in_table_data = False
-
-    def handle_starttag(self, tag, attrs):
-        if tag == 'td':
-            self.in_table_data = True
-
-    def handle_endtag(self, tag):
-        if tag == 'td':
-            self.in_table_data = False
-
-    def handle_data(self, data):
-        if self.in_table_data:
-            if self.rnp.search(data):
-                return
-            if self.wnp.search(data):
-                return
-            if self.wlp.search(data):
-                self.lines.append(data.strip('\n'))
-
-    def readline(self):
-        if self.current_line < len(self.lines):
-            self.current_line += 1
-            return self.lines[self.current_line - 1]
-        else:
-            return ''
+TEXT_URL = 'http://latin-texts.{}.svc.cluster.local/{}/{}/{}.txt'
+NS_FILE = '/var/run/secrets/kubernetes.io/serviceaccount/namespace'
 
 
 def get_text(author, work, chapter):
     from text import Text
 
-    headers = {'user-agent': 'curl/7.64.1'}
-    request_path = PACKHUM_URL.format(author, work, chapter)
-    r = requests.get(request_path, headers=headers)
-    if r.status_code != 200:
-        return None
+    # headers = {'user-agent': 'curl/7.64.1'}
+    with open(NS_FILE) as f:
+        namespace = f.read()
+        request_path = TEXT_URL.format(namespace, author, work, chapter)
+        try:
+            r = requests.get(request_path)
+            if r.status_code != 200:
+                print('Received {} from server'.format(r.status_code))
+                return None
+        except ConnectionError:
+            print('Unable to connect to server at {}'.format(request_path))
+            return None
 
-    parser = PackhumHTMLParser()
-    parser.init_regex()
-    parser.feed(r.text)
-    return Text(parser)
+        with open('/tmp/' + '-'.join([
+                author,
+                work,
+                chapter]) + '.txt', 'w+') as tmp_file:
+            tmp_file.write(r.text)
+            tmp_file.seek(0)
+            return Text(tmp_file)
 
 
 def upload_processed_text(text, name,
@@ -79,7 +51,7 @@ def main():
     from cos import CloudObjectStorage
 
     parser = argparse.ArgumentParser(
-        description='Download and parse Latin text from packhum.org',
+        description='Download and parse Latin texts',
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('-a', '--author-index',
                         required=False, help='Author index')
@@ -135,13 +107,15 @@ def main():
     text = get_text(author_index, work_index, chapter_index)
 
     if cos_endpoint:
+        upload_file_name = '-'.join([
+            date.today().isoformat(),
+            author_index,
+            work_index,
+            chapter_index]) + '.text'
+        print('Uploading file {} to COS...'.format(upload_file_name))
         upload_processed_text(
                 text=text,
-                name='-'.join([
-                    date.today().isoformat(),
-                    author_index,
-                    work_index,
-                    chapter_index]) + '.text',
+                name=upload_file_name,
                 bucket_name=bucket,
                 cos=CloudObjectStorage(
                     api_key=api_key,

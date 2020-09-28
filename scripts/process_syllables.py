@@ -105,8 +105,11 @@ def main():
     for line in w.lines():
         syls = []
         for word in line:
-            for syl in word.to_syllables():
-                syls.append(syl)
+            try:
+                for syl in word.to_syllables():
+                    syls.append(syl)
+            except IndexError:
+                print('Unable to syllabify \"{}\", skipping'.format(word.chars))
         syllabified_lines.append(SyllabifiedLine(syls))
 
     print("Writing output to ", output_file)

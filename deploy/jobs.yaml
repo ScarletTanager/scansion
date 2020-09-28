@@ -1,0 +1,53 @@
+apiVersion: codeengine.cloud.ibm.com/v1beta1
+kind: JobDefinition
+metadata:
+  name: catullus-text
+spec:
+  arraySpec: "0"
+  maxExecutionTime: 600
+  retryLimit: 3
+  template:
+    containers:
+    - args:
+      - /scansion/scripts/process_text.py
+      command:
+      - /usr/local/bin/python
+      envFrom:
+      - configMapRef:
+          name: scansion-config-hm78498g62
+      - secretRef:
+          name: cloud-access-t6k8722f9k
+      image: sandycash/getlatintext:latest
+      name: catullus-text
+      resources:
+        requests:
+          cpu: "1"
+          ephemeral-storage: 500Mi
+          memory: 128Mi
+---
+apiVersion: codeengine.cloud.ibm.com/v1beta1
+kind: JobDefinition
+metadata:
+  name: catullus-syllable
+spec:
+  arraySpec: "0"
+  maxExecutionTime: 600
+  retryLimit: 3
+  template:
+    containers:
+    - args:
+      - /scansion/scripts/process_syllables.py
+      command:
+      - /usr/local/bin/python
+      envFrom:
+      - configMapRef:
+          name: scansion-config-hm78498g62
+      - secretRef:
+          name: cloud-access-t6k8722f9k
+      image: sandycash/process_syllable:latest
+      name: catullus-syllable
+      resources:
+        requests:
+          cpu: "1"
+          ephemeral-storage: 500Mi
+          memory: 128Mi
