@@ -68,6 +68,13 @@ def main():
             work_index,
             chapter_index
             ]) + '.syl'
+    data_file = '-'.join(
+        [
+            date.today().isoformat(),
+            author_index,
+            work_index,
+            chapter_index
+            ]) + '.csv'
 
     # Process arguments related to COS and IAM access
     cos_endpoint = args.cos_endpoint if args.cos_endpoint else os.environ.get(
@@ -117,9 +124,21 @@ def main():
         for s in syllabified_lines:
             f.write(s.string())
 
+    print("Writing data to ", data_file)
+    with open(data_file, "w") as d:
+        for s in syllabified_lines:
+            for syl in s.syllables:
+                d.write('{},{}\n'.format(
+                    syl.nucleus_weight(), syl.coda_weight()))
+
     if cos_client:
         upload_results(
             file_name=output_file,
+            bucket_name=bucket,
+            cos_client=cos_client
+        )
+        upload_results(
+            file_name=data_file,
             bucket_name=bucket,
             cos_client=cos_client
         )
