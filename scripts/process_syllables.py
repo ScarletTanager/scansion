@@ -68,13 +68,7 @@ def main():
             work_index,
             chapter_index
             ]) + '.syl'
-    data_file = '-'.join(
-        [
-            date.today().isoformat(),
-            author_index,
-            work_index,
-            chapter_index
-            ]) + '.csv'
+    data_file = output_file + '.csv'
 
     # Process arguments related to COS and IAM access
     cos_endpoint = args.cos_endpoint if args.cos_endpoint else os.environ.get(
@@ -128,8 +122,11 @@ def main():
     with open(data_file, "w") as d:
         for s in syllabified_lines:
             for syl in s.syllables:
-                d.write('{},{}\n'.format(
-                    syl.nucleus_weight(), syl.coda_weight()))
+                d.write('{},{},{},{}\n'.format(
+                    syl.chars,
+                    syl.nucleus_weight(),
+                    syl.coda_weight(),
+                    '1' if syl.is_final() else '0'))
 
     if cos_client:
         upload_results(
