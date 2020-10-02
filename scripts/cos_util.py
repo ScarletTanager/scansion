@@ -2,6 +2,7 @@ import paths
 import argparse
 import json
 import sys
+import os
 
 
 def main():
@@ -11,7 +12,7 @@ def main():
     parser = argparse.ArgumentParser(
             description='Obtain ResponseMetadata from COS',
             formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument('-k', '--api-key', required=True,
+    parser.add_argument('-k', '--api-key', required=False,
                         help='IBM COS api key')
     parser.add_argument('-a', '--account-id', required=True,
                         help='IBM COS account id')
@@ -26,8 +27,10 @@ def main():
                         help='file to to send or get')
     args = parser.parse_args()
 
+    api_key = args.api_key if args.api_key else os.environ.get('API_KEY')
+
     cos = CloudObjectStorage(
-        api_key=args.api_key,
+        api_key=api_key,
         instance_id=args.account_id,
         iam_endpoint=args.iam_endpoint,
         cos_endpoint=args.endpoint
