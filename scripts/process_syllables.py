@@ -122,11 +122,12 @@ def main():
     with open(data_file, "w") as d:
         for s in syllabified_lines:
             for syl in s.syllables:
-                d.write('{},{},{},{}\n'.format(
+                d.write('{},{},{},{},{}\n'.format(
                     syl.chars,
                     syl.nucleus_weight(),
                     syl.coda_weight(),
-                    '1' if syl.is_final() else '0'))
+                    '1' if syl.is_final() else '0',
+                    syl.nucleus_class()))
 
     if cos_client:
         upload_results(

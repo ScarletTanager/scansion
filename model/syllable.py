@@ -3,6 +3,7 @@ import re
 
 VOWELS = 'aeiouy'
 VOWELS_NOT_U = 'aeioy'
+VOWELS_NOT_Y = 'aeiou'
 CONSONANTS = 'bcdfghjklmnpqrstvxz'
 SPECIALS_initial_only = ['\Aia[{}]'.format(CONSONANTS), 'cui', 'huic']
 SEQUENCES = ['qu', 'gu']
@@ -15,6 +16,20 @@ CONSONANT_SPECIAL_WEIGHTS = {
 
 STOPS = 'bcdgpt'
 LIQUIDS = 'rl'
+VOWEL_CLASSES = {
+    'a': 1,
+    'e': 2,
+    'i': 3,
+    'o': 4,
+    'u': 5,
+    'y': 6,
+    'ae': 7,
+    'oe': 8,
+    'au': 9,
+    'ei': 10,
+    'eu': 11,
+    'ui': 12
+}
 
 
 class Words:
@@ -126,6 +141,7 @@ class Syllable:
         self.slots = []
         self.final = False
         self.initial = False
+        self.vowel_class = 0
         nucleus_seen = False
         self.weights = {'onset': 0, 'nucleus': 0, 'coda': 0}
         for pos, c in enumerate(self.chars):
@@ -133,6 +149,15 @@ class Syllable:
                 # 'qu' does not fill a nucleus spot
                 if c == 'u' and pos > 0 and self.chars[pos - 1] in 'qg':
                     continue
+
+                # Enable differentiation based on what the actual vowel is
+                self.vowel_class = VOWEL_CLASSES[c]
+                if pos > 0:
+                    seq = '{}{}'.format(self.chars[pos - 1], c)
+                    if seq in VOWEL_CLASSES:
+                        if not (pos > 1 and seq[0] == 'u' and self.chars[pos - 2] in 'qg'):
+                            self.vowel_class = VOWEL_CLASSES[seq]
+
                 self.slots.append('V')
                 self.add_nucleus_weight()
                 nucleus_seen = True
@@ -191,6 +216,9 @@ class Syllable:
 
     def coda_weight(self):
         return self.weights['coda']
+
+    def nucleus_class(self):
+        return self.vowel_class
 
     def print(self):
         print(self.chars)
