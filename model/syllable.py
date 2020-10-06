@@ -82,6 +82,11 @@ class Word:
             newSyl.mark_final(False)
             newSyl.mark_initial(False)
             syllables.append(newSyl)
+
+        max_pos = len(syllables) - 1
+        for pos, syl in enumerate(syllables):
+            syl.set_word_position(pos)
+            syl.set_reverse_word_position(max_pos - pos)
         syllables[0].mark_initial()
         syllables[-1].mark_final()
         return syllables
@@ -92,7 +97,14 @@ class Word:
 class SyllabifiedLine:
     def __init__(self, syllables):
         self.syllables = syllables
+        max_pos = len(self.syllables) - 1
+
         for pos, syl in enumerate(self.syllables):
+            # Not all lines have the same syllable count (excepting meters
+            # such as hendecasyllabics), so we record the position relative
+            # to both the beginning and the end of the line.
+            syl.set_line_position(pos)
+            syl.set_reverse_line_position(max_pos - pos)
             # If we are not the last syllable in the line, then our weight is
             # affected by the next syllable
             if pos < len(self.syllables) - 1:
@@ -137,6 +149,10 @@ class SyllabifiedLine:
 
 class Syllable:
     def __init__(self, chars):
+        self.line_position = -1
+        self.reverse_line_position = -1
+        self.word_position = -1
+        self.reverse_word_position = -1
         self.chars = chars[:].lower()
         self.slots = []
         self.final = False
@@ -193,6 +209,21 @@ class Syllable:
 
     def is_initial(self):
         return self.initial
+
+    def set_line_position(self, pos):
+        self.line_position = pos
+
+    def set_reverse_line_position(self, pos):
+        self.reverse_line_position = pos
+
+    def set_word_position(self, pos):
+        self.word_position = pos
+
+    def set_reverse_word_position(self, pos):
+        self.reverse_word_position = pos
+
+    def positions(self):
+        return self.word_position, self.reverse_word_position, self.line_position, self.reverse_line_position
 
     # For handling elision
     def set_zero_weight(self):
