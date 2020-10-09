@@ -4,6 +4,7 @@ import tokenize
 class Text:
     def __init__(self, data):
         op = getattr(data, 'readline', None)
+        self.lines = []
         if callable(op):
             self.linedicts = {}
             self.tokens = tokenize.generate_tokens(data.readline)
@@ -19,7 +20,6 @@ class Text:
                     # Each line is a dict, key is the starting position in the line, value is the word
                     self.linedicts[lineno] = {tok[2][1]: tok[1]}
 
-            self.lines = []
             for lineno in sorted(self.linedicts):
                 ld = self.linedicts[lineno]
                 linewords = []

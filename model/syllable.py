@@ -149,6 +149,7 @@ class SyllabifiedLine:
 
 class Syllable:
     def __init__(self, chars):
+        self.line_no = -1
         self.line_position = -1
         self.reverse_line_position = -1
         self.word_position = -1
@@ -209,6 +210,12 @@ class Syllable:
 
     def is_initial(self):
         return self.initial
+
+    def set_line_number(self, no):
+        self.line_no = no
+
+    def line_number(self):
+        return self.line_no
 
     def set_line_position(self, pos):
         self.line_position = pos

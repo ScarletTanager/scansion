@@ -69,6 +69,10 @@ def main():
                         required=False, help='IAM token endpoint')
     parser.add_argument('-k', '--api-key',
                         required=False, help='IAM API key')
+    parser.add_argument('-f', '--input-file',
+                        required=False, help='Input file')
+    parser.add_argument('-o', '--output-file',
+                        required=False, help='Output file')
 
     args = parser.parse_args()
 
@@ -79,10 +83,6 @@ def main():
         'AUTHOR_INDEX')
     work_index = args.work_index if args.work_index else os.environ.get(
         'WORK_INDEX')
-
-    if not author_index or not work_index or not chapter_index:
-        print('Must supply the indices for author, work, and chapter.')
-        return -1
 
     # Process arguments related to COS and IAM access
     iam_endpoint = args.iam_endpoint if args.iam_endpoint else os.environ.get(
@@ -104,7 +104,16 @@ def main():
             print('Missing one or more required parameters for using COS.')
             return -1
 
-    text = get_text(author_index, work_index, chapter_index)
+    text = None
+    if args.input_file:
+        with open(args.input_file) as f:
+            from text import Text
+            text = Text(f)
+    else:
+        if not author_index or not work_index or not chapter_index:
+            print('Must supply the indices for author, work, and chapter.')
+            return -1
+        text = get_text(author_index, work_index, chapter_index)
 
     if cos_endpoint:
         upload_file_name = '-'.join([

@@ -1,0 +1,20 @@
+def run_gbrt(d, r, t, ne=0, lr=0.1, md=3, trs=0, frs=0, mf=7):
+    X_train, X_test, y_train, y_test = train_test_split(
+        np.append(r, d, 1), t, random_state=trs)
+    gbrt = GradientBoostingClassifier(
+        n_estimators=ne, learning_rate=lr, max_depth=md, max_features=mf, random_state=frs)
+    gbrt.fit(X_train[:, 1:], y_train)
+    print("Training score: {:.3f}".format(gbrt.score(X_train[:, 1:], y_train)))
+    print("Test score: {:.3f}".format(gbrt.score(X_test[:, 1:], y_test)))
+    plot_feature_importances(gbrt)
+    preds = gbrt.predict(X_test[:, 1:])
+    print(preds)
+    print('Predictions: {} {}'.format(type(preds), preds.shape))
+    dec = gbrt.decision_function(X_test[:, 1:])
+    print('Decision function: {} {}'.format(type(dec), dec.shape))
+    print(dec[:3])
+    probs = gbrt.predict_proba(X_test[:, 1:])
+    print('Probabilities: {} {}'.format(type(probs), probs.shape))
+    print(probs[:3])
+    outcomes = np.append(X_test, np.reshape(preds, (-1, 1)), 1)
+    print(outcomes[:6])
