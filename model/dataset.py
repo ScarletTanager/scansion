@@ -22,20 +22,26 @@ def load_latin_dataset(data_file_name, target_file_name):
     with open(data_file_name) as f:
         for line in f:
             feature_vals = line.strip().split(',')
-            if len(feature_vals) != 8:
+            if len(feature_vals) != 9:
                 # Skip the line silently for now
                 data_rows_skipped += 1
                 continue
-            data.append([
-                int(feature_vals[1]),
-                float(feature_vals[2]),
-                int(feature_vals[3]),
-                int(feature_vals[4]),
-                int(feature_vals[5]),
-                int(feature_vals[6]),
-                int(feature_vals[7])
-            ])
-            raw.append([feature_vals[0]])
+            try:
+                data.append([
+                    int(feature_vals[2]),
+                    float(feature_vals[3]),
+                    int(feature_vals[4]),
+                    int(feature_vals[5]),
+                    int(feature_vals[6]),
+                    int(feature_vals[7]),
+                    int(feature_vals[8])
+                ])
+                raw.append([
+                    int(feature_vals[0]),
+                    feature_vals[1]])
+            except ValueError:
+                data_rows_skipped += 1
+                print('Bad line: {}'.format(line))
 
     dataset['data'] = np.array(data)
     dataset['raw'] = np.array(raw)
@@ -64,11 +70,11 @@ def run_gbc(dataset, split_random_state, n_estimators, learning_rate, max_depth,
         max_features=max_features,
         random_state=model_random_state)
 
-    gbc.fit(X_train[:, 1:], y_train)
+    gbc.fit(X_train[:, 2:], y_train)
     data_with_predictions = np.append(
         X_test,
-        np.reshape(gbc.predict(X_test[:, 1:]), (-1, 1)), 1)
+        np.reshape(gbc.predict(X_test[:, 2:]), (-1, 1)), 1)
     data_with_preds_and_probabilities = np.append(
-        data_with_predictions, gbc.predict_proba(X_test[:, 1:]), 1)
+        data_with_predictions, gbc.predict_proba(X_test[:, 2:]), 1)
 
-    return data_with_preds_and_probabilities
+    return gbc.score(X_train[:, 2:], y_train), gbc.score(X_test[:, 2:], y_test), data_with_preds_and_probabilities

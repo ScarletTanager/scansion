@@ -120,10 +120,11 @@ def main():
 
     print("Writing data to ", data_file)
     with open(data_file, "w") as d:
-        for s in syllabified_lines:
+        for lineno, s in enumerate(syllabified_lines):
             for syl in s.syllables:
                 wp, rwp, lp, rlp = syl.positions()
-                d.write('{},{},{},{},{},{},{},{}\n'.format(
+                d.write('{},{},{},{},{},{},{},{},{}\n'.format(
+                    lineno,
                     syl.chars,
                     syl.nucleus_weight(),
                     syl.coda_weight(),
