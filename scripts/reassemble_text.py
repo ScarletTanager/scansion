@@ -13,10 +13,6 @@ def main():
                         required=True, help='Path to the data file')
     parser.add_argument('-t', '--targets-file',
                         required=True, help='Path to the targets file')
-    parser.add_argument('-a', '--test-data-file',
-                        required=False, help='Path to test data file')
-    parser.add_argument('-g', '--test-target-file',
-                        required=False, help='Path to the test targets file')
     parser.add_argument('-e', '--estimators',
                         required=False, help='Number of estimators in the model')
     parser.add_argument('-l', '--learning-rate',
@@ -45,13 +41,6 @@ def main():
     mf = int(args.max_features) if args.max_features else dataset.data.shape[1]
     mrs = int(args.model_random_state) if args.model_random_state else 0
 
-    tds = None
-    if args.test_data_file and args.test_target_file:
-        tds = dataset.load_latin_dataset(
-            data_file_name=args.test_data_file,
-            target_file_name=args.test_target_file
-        )
-
     train_score, test_score, final_result_set = dataset.run_gbc(
         dataset=ds,
         split_random_state=srs,
@@ -59,8 +48,7 @@ def main():
         learning_rate=lr,
         max_depth=md,
         max_features=mf,
-        model_random_state=mrs,
-        test_dataset=tds)
+        model_random_state=mrs)
 
     if args.output_file:
         with open(args.output_file, 'w') as of:

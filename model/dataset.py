@@ -55,13 +55,20 @@ def load_latin_dataset(data_file_name, target_file_name):
     return dataset
 
 
-def run_gbc(dataset, split_random_state, n_estimators, learning_rate, max_depth, max_features, model_random_state):
+def run_gbc(dataset, split_random_state, n_estimators, learning_rate, max_depth, max_features, model_random_state, test_dataset=None):
     # for now we're still working with a training dataset.
     # TODO: Update to use unseen data
     X_train, X_test, y_train, y_test = train_test_split(
         np.append(dataset.raw, dataset.data, 1),
         dataset.target,
         random_state=split_random_state)
+
+    if test_dataset:
+        X_train = np.append(dataset.raw, dataset.data, 1)
+        y_train = dataset.target
+
+        X_test = np.append(test_dataset.raw, test_dataset.data, 1)
+        y_test = test_dataset.target
 
     gbc = GradientBoostingClassifier(
         n_estimators=n_estimators,

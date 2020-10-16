@@ -31,4 +31,22 @@ class Text:
         for line in self.lines:
             print(line)
 
-# def create_bucket_if_does_not_exist(bucket=None):
+
+class ScannedText:
+    def __init__(self, data_file):
+        self.lines = {}
+        with open(data_file) as f:
+            for line in f:
+                vals = line.strip().split(',')
+                lineno = int(vals[0])
+                quantity = int(vals[9])
+                if lineno not in self.lines:
+                    self.lines[lineno] = {}
+                self.lines[lineno][int(float(vals[7]))] = {
+                    'chars': vals[1],
+                    'wordpos': int(float(vals[5])),
+                    'quantity': quantity,
+                    'certainty': float(vals[10 + quantity])
+                }
+
+            # def create_bucket_if_does_not_exist(bucket=None):

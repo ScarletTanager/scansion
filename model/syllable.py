@@ -73,8 +73,6 @@ class Word:
                 VOWELS),
             flags=re.IGNORECASE)
 
-    # TODO: handle diphthongs
-
     def to_syllables(self):
         syllables = []
         for syl in self.vsp.finditer(self.chars):
