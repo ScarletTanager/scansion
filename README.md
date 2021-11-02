@@ -24,7 +24,7 @@ of the word - it must derive solely from metrical/prosodic context.
 
 The use of ML to perform metric analysis is not wholly novel.  There are at least a couple of
 previous efforts of which I am aware:
-1. Moy, Laney: [Scanning Vergil using a Neural Network](https://community.wolfram.com/groups/-/m/t/1732445) - This is an impressive effort
+1. Moy, Laney: [Automatic Metrical Scansion of Latin Poetry in Dactylic Hexameter](https://community.wolfram.com/groups/-/m/t/1732445) - This is an impressive effort
 implemented by a (at the time) rising high school senior.  But...
     1. The ratio of training data to test data is far, far too high - 824 lines of training data to 20 lines of test data.  This means
     that the model produced will inevitably be highly overspecified and not sufficiently general purpose for my purposes.
