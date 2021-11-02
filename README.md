@@ -24,7 +24,7 @@ of the word - it must derive solely from metrical/prosodic context.
 
 The use of ML to perform metric analysis is not wholly novel.  There are at least a couple of
 previous efforts of which I am aware:
-1. [Scanning Vergil using a Neural Network](https://community.wolfram.com/groups/-/m/t/1732445) - This is an impressive effort
+1. Moy, Laney: [Scanning Vergil using a Neural Network](https://community.wolfram.com/groups/-/m/t/1732445) - This is an impressive effort
 implemented by a (at the time) rising high school senior.  But...
     1. The ratio of training data to test data is far, far too high - 824 lines of training data to 20 lines of test data.  This means
     that the model produced will inevitably be highly overspecified and not sufficiently general purpose for my purposes.
@@ -34,10 +34,10 @@ implemented by a (at the time) rising high school senior.  But...
     (which is, I think, the correct impulse), but I'm not convinced this is viable.  (But I'm willing to be proven wrong.)
     1. The model only accounts for dactylic hexameter.  Catullus uses around ten different meters, for example.  Our model
     needs to be able scan a poem in any meter known in classical Latin verse.  (Note: I am not differentiating Republican vs. Imperial, etc. - I am simply differentiating classical from medieval for the nonce.)
-1. [Machine Learning for Metrical Analysis of English Poetry](https://aclanthology.org/C16-1074.pdf) - I think the authors here are after a similar purpose
+1. Agirrezabal, Manex; Alegria, Iñaki; Hulden, Mans: [Machine Learning for Metrical Analysis of English Poetry](https://aclanthology.org/C16-1074.pdf) - I think the authors here are after a similar purpose
 to my own, albeit using a different corpus (English poetry) and a stress-based, rather than a quantity-based (as in Latin) system.  I just found this article
 recently, though, and it bears a couple of readings.
-1. [Automatic Classification of Poetry by Neural Scansion](https://rokrokss.com/assets/cv/aiml.pdf) - Based on my initial reading, I think the authors
+1. Kim, Hyungrok; Zhao, Yu; Zelalem, Belay: [Automatic Classification of Poetry by Neural Scansion](https://rokrokss.com/assets/cv/aiml.pdf) - Based on my initial reading, I think the authors
 here recognize some of the problems with much computational scanning (although she didn't mention it as a problem, the author of the first solution sidestepped this as well by refusing to try to encode actual scansion rules) - namely that "poetic license" can result in a word scanning differently in
 verse than one might expect based on its normal (prose) use would indicate, and that wholesale avoidance of knowing the language used is difficult
 in a rule based system (e.g. the verb `conVICT` vs. the noun `CONvict`).
@@ -67,4 +67,6 @@ Latin orthography can make identifying syllabic boundaries problematic - for exa
 and `v` (consonantal /w/) respectively - such as my own 2nd. Ed. of Quinn's Catullus, which I have owned since high school.  Others may use `i` for /y/ but `v` for /w/ (see [Catullus 1 at the Packard Humanities Institute](https://latin.packhum.org/loc/472/1/0#0) for an example of this), or perhaps vice versa.
 This can be especially problematic when analyzing a word such as `iam` vs. `iambus` - the initial `i` in the first is consonantal (it is a monosyllabic word), but `iambus` is actually _trisyllabic_ - accounting for this without "teaching the model Latin" is a key difficulty.  One step is therefore to normalize
 the input texts into a standardized orthography, so we will preprocess the texts (using both computation and some amount of human editing)
-to render glide consonants solely as `j` and `v`.
+to render glide consonants solely as `j` and `v`.  
+
+(Moy) handles this problem in part by assigning every character a probabilistic classification of long vowel, short vowel, consonant, punctuation mark, or ignored vowel.  I am not convinced of the general viability of this strategy - for example, a diphthong is an orthographic rendering of what is, metrically, a single long vowel.  And considering punctuation also seems inaccurate to me - for example, commas are not found in the original texts - they are later introductions to match our own sense of sentence/phrase structure - but they are frequently seen in most commonly used editions of classical Latin verse.  My own edition of Catullus (Quinn, 2nd. Ed.) contains not only commas but also parentheses as well.  For the purposes of meter, I would argue that we should omit these entirely from our analysis (at least for now).
