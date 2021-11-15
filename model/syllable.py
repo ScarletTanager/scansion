@@ -37,9 +37,21 @@ class Words:
         with open(path) as f:
             lines = f.read().splitlines()
             self.wordlines = []
-            for line in lines:
+            for l in lines:
+                # Remove all punctuation; remove excess space between words;
+                # prodelision of est; elision
+                textline = re.sub(r'(?:ae|oe|[aeiou]) (h?[aeiou])',
+                                  r'\1',
+                                  re.sub(r'[aeu]m ([aeiou])',
+                                         r'\1',
+                                         re.sub(r'([aeu]m) est',
+                                                r'\1st',
+                                                ' '.join(
+                                                    re.split(
+                                                        '\W+',
+                                                        re.sub(r'[,:.;!?]', '', l))))))
                 self.wordlines.append([Word(n.strip())
-                                       for n in ast.literal_eval(line)])
+                                       for n in textline.split()])
 
     def lines(self):
         return self.wordlines
@@ -50,28 +62,30 @@ class Word:
         self.chars = chars.lower()
         # Replace 'u' standing for 'v' with an actual 'v' - makes
         # syllabification much simpler
-        self.chars = re.sub('((?<=[{}]))u(?=[{}][{}])|(?<=\A)u(?=[{}])|(?<![tfqg])u(?=[aeo])|(?<=[{}])u(?=[{}]\Z)'.format(
-            VOWELS, VOWELS, CONSONANTS, VOWELS, VOWELS, VOWELS), 'v', self.chars)
-        self.chars = re.sub(
-                'iu(?=([ugp]|[vn][{}]|ng|st))'.format(VOWELS), 'ju', self.chars)
-        self.chars = re.sub('(?<=\A)io', 'jo', self.chars)
-        self.chars = re.sub('((?<=o)|(?<=\A))ia', 'ja', self.chars)
+        # NOTE: Disabling for now, we'll correct these manually (same for consonantal
+        # i->j)
+        #self.chars = re.sub('((?<=[{}]))u(?=[{}][{}])|(?<=\A)u(?=[{}])|(?<![tfqg])u(?=[aeo])|(?<=[{}])u(?=[{}]\Z)'.format(
+        #    VOWELS, VOWELS, CONSONANTS, VOWELS, VOWELS, VOWELS), 'v', self.chars)
+        # self.chars = re.sub(
+        #        'iu(?=([ugp]|[vn][{}]|ng|st))'.format(VOWELS), 'ju', self.chars)
+        # self.chars = re.sub('(?<=\A)io', 'jo', self.chars)
+        # self.chars = re.sub('((?<=o)|(?<=\A))ia', 'ja', self.chars)
         # Take care of Greek names - easiest way is to treat 'y' as a true upsilon
         self.chars = re.sub('(?<=[{}])y(?=[{}])'.format(CONSONANTS, CONSONANTS),
                             'u', self.chars)
         # self.chars = chars
         self.vsp = re.compile(
-            # '((?<=\A)({}|[{}])*)?[{}]?({}|[{}])(([{}])*(?![{}]))?'.format(
-            '({})|({}|[{}])*[{}]?({}|[{}])(([{}])*(?![{}]))?'.format(
-                '|'.join(SPECIALS_initial_only),
-                '|'.join(SEQUENCES),
-                CONSONANTS,
-                CONSONANTS,
-                '|'.join(DIPTHONGS),
-                VOWELS,
-                CONSONANTS,
-                VOWELS),
-            flags=re.IGNORECASE)
+             # '((?<=\A)({}|[{}])*)?[{}]?({}|[{}])(([{}])*(?![{}]))?'.format(
+             '({})|({}|[{}])*[{}]?({}|[{}])(([{}])*(?![{}]))?'.format(
+                 '|'.join(SPECIALS_initial_only),
+                 '|'.join(SEQUENCES),
+                 CONSONANTS,
+                 CONSONANTS,
+                 '|'.join(DIPTHONGS),
+                 VOWELS,
+                 CONSONANTS,
+                 VOWELS),
+             flags=re.IGNORECASE)
 
     def to_syllables(self):
         syllables = []
@@ -89,9 +103,10 @@ class Word:
         syllables[-1].mark_final()
         return syllables
 
-
 # SyllabifiedLine represents a single line decomposed into Syllable objects,
 # stored in order of occurrence within the line
+
+
 class SyllabifiedLine:
     def __init__(self, syllables):
         self.syllables = syllables
@@ -107,22 +122,22 @@ class SyllabifiedLine:
             # affected by the next syllable
             if pos < len(self.syllables) - 1:
                 next_syl = self.syllables[pos + 1]
-                # Handle elision
-                if syl.is_final():
-                    if next_syl.chars[0] in VOWELS or (
-                            next_syl.chars[0] == 'h'
-                            and next_syl.chars[1] in VOWELS):
-                        if syl.chars[-1] in VOWELS or (
+            # Handle elision
+            if syl.is_final():
+                if next_syl.chars[0] in VOWELS or (
+                        next_syl.chars[0] == 'h'
+                        and next_syl.chars[1] in VOWELS):
+                    if syl.chars[-1] in VOWELS or (
                                 syl.chars[-1] == 'm'
                                 and syl.chars[-2] in VOWELS):
-                            syl.set_zero_weight()
-                            continue
+                        syl.set_zero_weight()
+                        continue
 
-                    # Handle stop-liquid sequence across syllable boundary
-                if syl.chars[-1] in STOPS and next_syl.chars[0] in LIQUIDS:
-                    syl.add_coda_weight(.5)
-                else:
-                    syl.add_coda_weight(self.syllables[pos + 1].onset_weight())
+            # Handle stop-liquid sequence across syllable boundary
+            if syl.chars[-1] in STOPS and next_syl.chars[0] in LIQUIDS:
+                syl.add_coda_weight(.5)
+            else:
+                syl.add_coda_weight(self.syllables[pos + 1].onset_weight())
 
     def syllable_count(self):
         return len(self.syllables)
@@ -132,7 +147,8 @@ class SyllabifiedLine:
 
     def string(self):
         return '\n'.join([
-            ' '.join('{:<7}'.format(syl.chars) for syl in self.syllables),
+            ' '.join('{:<7}'.format(syl.chars)
+                     for syl in self.syllables),
             ' '.join('{:<7}'.format(''.join(syl.slots))
                      for syl in self.syllables),
             ' '.join('{:<3} {:<3}'.format(
