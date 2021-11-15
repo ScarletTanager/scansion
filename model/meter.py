@@ -7,6 +7,8 @@ IAMB = [1, 2]
 DIBRACH = [1, 1]
 BACCHIUS = [1, 2, 2]
 AMPHIBRACH = [1, 2, 1]
+LONGUS = [2]
+BREVIS = [1]
 
 
 def _flatten(p):
@@ -78,3 +80,18 @@ class ElegiacCouplets(BaseMeter):
             [TROCHEE],
             [DIBRACH, IAMB]
         ])
+
+# Might be easier if we treat (dactyllic) pentameter as a separate meter...
+
+
+class DactyllicPentameter(BaseMeter):
+    def __init__(self):
+        super().__init__()
+        self.feet = [
+            [DACTYL, SPONDEE],
+            [DACTYL, SPONDEE],
+            [LONGUS],
+            [DACTYL],
+            [DACTYL],
+            [LONGUS, BREVIS]
+        ]
