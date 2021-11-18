@@ -49,7 +49,7 @@ class Words:
                                                 ' '.join(
                                                     re.split(
                                                         '\W+',
-                                                        re.sub(r'[,:.;!?]', '', l))))))
+                                                        re.sub(r'[\'><)(,:.;!?]', '', l))))))
                 self.wordlines.append([Word(n.strip())
                                        for n in textline.split()])
 

@@ -4,7 +4,7 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.model_selection import train_test_split
 
 
-def load_latin_dataset(data_file_name, target_file_name):
+def load_latin_scansion_dataset(data_file_name, target_file_name):
     dataset = Bunch(
         name='Latin Dataset for Syllabic Analysis',
         feature_names=['nucleus_weight',
@@ -35,6 +35,57 @@ def load_latin_dataset(data_file_name, target_file_name):
                     int(feature_vals[6]),
                     int(feature_vals[7]),
                     int(feature_vals[8])
+                ])
+                raw.append([
+                    int(feature_vals[0]),
+                    feature_vals[1]])
+            except ValueError:
+                data_rows_skipped += 1
+                print('Bad line: {}'.format(line))
+
+    dataset['data'] = np.array(data)
+    dataset['raw'] = np.array(raw)
+
+    target = []
+    with open(target_file_name) as f:
+        for line in f:
+            target.append(int(line.strip()))
+        dataset['target'] = np.array(target)
+
+    return dataset
+
+# load_latin_meter_dataset loads a dataset for classifying poems by meter
+
+
+def load_latin_meter_dataset(data_file_name, target_file_name):
+    dataset = Bunch(
+        name='Latin Dataset for Metric Classification',
+        feature_names=['syllable_count'],
+        target_names=[
+            'Hendecasyllabics',
+            'Dactyllic Hexameter',
+            'Choliambics',
+            'Elegiac Couplets',
+            'Dactyllic Pentameter',
+            'Glyconic',
+            'Pherecratean',
+            'First Asclepiadean',
+            'Other'
+        ]
+    )
+    data = []
+    raw = []
+    data_rows_skipped = 0
+    with open(data_file_name) as f:
+        for line in f:
+            feature_vals = line.strip().split(',')
+            if len(feature_vals) != 3:
+                # Skip the line silently for now
+                data_rows_skipped += 1
+                continue
+            try:
+                data.append([
+                    float(feature_vals[2])
                 ])
                 raw.append([
                     int(feature_vals[0]),

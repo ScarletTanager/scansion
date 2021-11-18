@@ -9,6 +9,7 @@ BACCHIUS = [1, 2, 2]
 AMPHIBRACH = [1, 2, 1]
 LONGUS = [2]
 BREVIS = [1]
+CHORIAMB = [2, 1, 1, 2]
 
 
 def _flatten(p):
@@ -94,4 +95,37 @@ class DactyllicPentameter(BaseMeter):
             [DACTYL],
             [DACTYL],
             [LONGUS, BREVIS]
+        ]
+
+
+class Glyconic(BaseMeter):
+    def __init__(self):
+        super().__init__()
+        self.feet = [
+            [SPONDEE, TROCHEE],
+            [CHORIAMB],
+            [IAMB]
+        ]
+
+
+class Pherecratean(BaseMeter):
+    def __init__(self):
+        super().__init__()
+        self.feet = [
+            [SPONDEE, TROCHEE],
+            [CHORIAMB],
+            [BREVIS, LONGUS]
+        ]
+
+
+class FirstAsclepiadean(BaseMeter):
+    def __init__(self):
+        super().__init__()
+        self.feet = [
+            [SPONDEE],
+            [DACTYL],
+            [LONGUS],
+            [DACTYL],
+            [TROCHEE],
+            [BREVIS, LONGUS]
         ]

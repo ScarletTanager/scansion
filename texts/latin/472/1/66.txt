@@ -1,112 +1,94 @@
-Non possum reticere, deae, qua me Allius in re
-  iuverit aut quantis foverit officiis,
-ne fugiens saeclis obliviscentibus aetas
-  illius hoc caeca nocte tegat studium:
-sed dicam vobis, vos porro dicite multis
-  milibus et facite haec charta loquatur anus,
-<versibus ut nostris etiam post funera vivat,>
-  notescatque magis mortuus atque magis,
-nec tenuem texens sublimis aranea telam
-  in deserto Alli nomine opus faciat.
-nam, mihi quam dederit duplex Amathusia curam,
-  scitis, et in quo me torruerit genere,
-cum tantum arderem quantum Trinacria rupes
-  lymphaque in Oetaeis Malia Thermopylis,
-maesta neque assiduo tabescere lumina fletu
-  cessarent tristique imbre madere genae.
-qualis in aerii perlucens vertice montis
-  rivus muscoso prosilit a lapide,
-qui cum de prona praeceps est valle volutus,
-  per medium densi transit iter populi,
-dulce viatori lasso in sudore levamen,
-  cum gravis exustos aestus hiulcat agros;
-ac velut in nigro iactatis turbine nautis
-  lenius aspirans aura secunda venit
-iam prece Pollucis, iam Castoris implorata:
-  tale fuit nobis Allius auxilium.
-is clausum lato patefecit limite campum,
-  isque domum nobis isque dedit dominam,
-ad quam communes exerceremus amores.
-  quo mea se molli candida diva pede
-intulit et trito fulgentem in limine plantam
-  innixa arguta constituit solea,
-coniugis ut quondam flagrans advenit amore
-  Protesileam Laodamia domum
-inceptam frustra, nondum cum sanguine sacro
-  hostia caelestes pacificasset eros.
-nil mihi tam valde placeat, Rhamnusia virgo,
-  quod temere invitis suscipiatur eris.
-quam ieiuna pium desideret ara cruorem,
-  doctast amisso Laodamia viro,
-coniugis ante coacta novi dimittere collum,
-  quam veniens una atque altera rursus hiems
-noctibus in longis avidum saturasset amorem,
-  posset ut abrupto vivere coniugio:
-quod scibant Parcae non longo tempore abesse,
-  si miles muros isset ad Iliacos.
-nam tum Helenae raptu primores Argivorum
-  coeperat ad sese Troia ciere viros,
-Troia (nefas) commune sepulcrum Asiae Europaeque,
-  Troia virum et virtutum omnium acerba cinis,
-quaene etiam nostro letum miserabile fratri
-  attulit. ei misero frater adempte mihi,
-ei misero fratri iucundum lumen ademptum,
-  tecum una totast nostra sepulta domus,
-omnia tecum una perierunt gaudia nostra,
-  quae tuus in vita dulcis alebat amor.
-quem nunc tam longe non inter nota sepulcra
-  nec prope cognatos compositum cineres,
-sed Troia obscena, Troia infelice sepultum
-  detinet extremo terra aliena solo.
-ad quam tum properans fertur lecta undique pubes
-  Graia penetrales deseruisse focos,
-ne Paris abducta gavisus libera moecha
-  otia pacato degeret in thalamo.
-quo tibi tum casu, pulcherrima Laodamia,
-  ereptumst vita dulcius atque anima
-coniugium: tanto te absorbens vertice amoris
-  aestus in abruptum detulerat barathrum,
-quale ferunt Grai Pheneum prope Cyllenaeum
-  siccare emulsa pingue palude solum,
-quod quondam caesis montis fodisse medullis
-  audit falsiparens Amphitryoniades,
-tempore quo certa Stymphalia monstra sagitta
-  perculit imperio deterioris eri,
-pluribus ut caeli tereretur ianua divis,
-  Hebe nec longa virginitate foret.
-sed tuus altus amor barathro fuit altior illo,
-  qui tamen indomitam ferre iugum docuit.
-nam nec tam carum confecto aetate parenti
-  una caput seri nata nepotis alit,
-qui, cum divitiis vix tandem inventus avitis
- 
-  nomen testatas intulit in tabulas,
-impia derisi gentilis gaudia tollens
-  suscitat a cano vulturium capiti:
-nec tantum niveo gavisast ulla columbo
-  compar, quae multo dicitur improbius
-oscula mordenti semper decerpere rostro
-  quam quae praecipue multivolast mulier:
-sed tu horum magnos vicisti sola furores,
-  ut semel es flavo conciliata viro.
-aut nihil aut paulo cui tum concedere digna
-  lux mea se nostrum contulit in gremium,
-quam circumcursans hinc illinc saepe Cupido
-  fulgebat crocina candidus in tunica.
-quae tamen etsi uno non est contenta Catullo,
-  rara verecundae furta feremus erae,
-ne nimium simus stultorum more molesti:
-  saepe etiam Iuno, maxima caelicolum,
-coniugis in culpa flagrantem contudit iram,
-  noscens omnivoli plurima furta Iovis.
-atqui nec divis homines componier aequumst,
-  <nec mala, quot Iuno quantave, nos patimur.
-141a
-tolle igitur questus, et forti mente, Catulle,>
-  ingratum tremuli tolle parentis opus.
-nec tamen illa mihi dextra deducta paterna
-  fragrantem Assyrio venit odore domum,
-sed furtiva dedit muta munuscula nocte,
-  ipsius ex ipso dempta viri gremio.
-quare illud satis est, si nobis is datur unis,
-  quem lapide illa diem candidiore notat.
+Omnia qui magni dispexit lumina mundi,
+  qui stellarum ortus comperit atque obitus,
+flammeus ut rapidi solis nitor obscuretur,
+  ut cedant certis sidera temporibus,
+ut Triviam furtim sub Latmia saxa relegans
+  dulcis amor gyro devocet aerio:
+idem me ille Conon caelesti in limine vidit
+  e Bereniceo vertice caesariem
+fulgentem clare, quam cunctis illa deorum
+  levia protendens bracchia pollicita est,
+qua rex tempestate novo auctatus hymenaeo
+  vastatum fines iverat Assyrios,
+dulcia nocturnae portans vestigia rixae,
+  quam de virgineis gesserat exuviis.
+estne novis nuptis odio Venus? an quod aventum
+  frustrantur falsis gaudia lacrimulis,
+ubertim thalami quas juxta limina fundunt?
+  non, ita me divi, vera gemunt, iuerint.
+id mea me multis docuit regina querellis
+  invisente novo proelia torva viro.
+et tu non orbum luxti deserta cubile,
+  sed fratris cari flebile discidium?
+quam penitus maestas exedit cura medullas!
+  ut tibi tunc toto pectore sollicitae
+sensibus ereptis mens excidit! at te ego certe
+  cognoram a parva virgine magnanimam.
+anne bonum oblita's facinus, quo regium adepta es
+  conjugium, quo non fortius ausit alis?
+sed tum maesta virum mittens quae verba locuta es!
+  Juppiter, ut tersti lumina saepe manu!
+quis te mutavit tantus deus? an quod amantes
+  non longe a caro corpore abesse volunt?
+atque ibi me cunctis pro dulci coniuge divis
+  non sine taurino sanguine pollicita es,
+si reditum tetulisset. is haud in tempore longo
+  captam Asiam Aegypti finibus addiderat.
+quis ego pro factis caelesti reddita coetu
+  pristina vota novo munere dissoluo.
+invita, o regina, tuo de vertice cessi,
+  invita: adjuro teque tuumque caput,
+digna ferat quod siquis inaniter adjurarit:
+  sed qui se ferro postulet esse parem?
+ille quoque eversus mons est, quem maximum in oris
+  progenies Thiae clara supervehitur,
+cum Medi peperere novum mare, cumque juventus
+  per medium classi barbara navit Athon.
+quid facient crines, cum ferro talia cedant?
+  Juppiter, ut Chalybon omne genus pereat,
+et qui principio sub terra quaerere venas
+  institit ac ferri stringere duritiem!
+abjunctae paulo ante comae mea fata sorores
+  lugebant, cum se Memnonis Aethiopis
+unigena impellens nutantibus aera pinnis
+  obtulit Arsinoes Locridos ales equus,
+isque per aetherias me tollens avolat umbras
+  et Veneris casto collocat in gremio.
+ipsa suum Zephyritis eo famulum legarat,
+  Graia Canopeis incola litoribus.
+hic liquidi vario ne solum in lumine caeli
+  ex Ariadnaeis aurea temporibus
+fixa corona foret, sed nos quoque fulgeremus
+  devotae flavi verticis exuviae,
+uvidulam a fluctu cedentem ad templa deum me
+  sidus in antiquis diva novum posuit:
+Virginis et saevi contingens namque Leonis
+  lumina, Callisto juncta Lycaoniae,
+vertor in occasum, tardum dux ante Booten,
+  qui vix sero alto mergitur Oceano.
+sed quamquam me nocte premunt vestigia divum,
+  lux autem canae Tethyi restituit
+(pace tua fari hic liceat, Rhamnusia virgo,
+  namque ego non ullo vera timore tegam,
+nec si me infestis discerpent sidera dictis,
+  condita quin imi pectoris evoluam):
+non his tam laetor rebus, quam me afore semper,
+  afore me a dominae vertice discrucior,
+quicum ego, dum virgo quidem erat, muliebribus expers
+  unguentis, una vilia multa bibi.
+nunc vos, optato quas junxit lumine taeda,
+  non prius unanimis corpora conjugibus
+tradite nudantes rejecta veste papillas,
+  quam jucunda mihi munera libet onyx,
+vester onyx, casto colitis quae jura cubili.
+  sed quae se impuro dedit adulterio,
+illius ah mala dona levis bibat irrita pulvis:
+  namque ego ab indignis praemia nulla peto.
+sed magis, o nuptae, semper concordia vestras,
+  semper amor sedes incolat assiduus.
+tu vero, regina, tuens cum sidera divam
+  placabis festis luminibus Venerem,
+unguinis expertem ne siris esse tuam me,
+  sed potius largis affice muneribus.
+sidera corruerint! iterum ut coma regia fiam,
+  proximus Hydrochoi fulguret Oarion!
