@@ -5,9 +5,12 @@ VOWELS = 'aeiouy'
 VOWELS_NOT_U = 'aeioy'
 VOWELS_NOT_Y = 'aeiou'
 CONSONANTS = 'bcdfghjklmnpqrstvxz'
-SPECIALS_initial_only = ['\Aia[{}]'.format(CONSONANTS), 'cui', 'huic']
+SPECIALS_initial_only = ['\Aia[{}]'.format(
+    CONSONANTS), 'sua']
+SPECIALS_long = ['seu', 'cui', 'huic', 'heu']
 SEQUENCES = ['qu', 'gu']
-DIPTHONGS = ['ae', 'oe', 'au', 'ei', 'eu']
+# DIPTHONGS = ['ae', 'oe', 'au', 'ei', 'eu']
+DIPTHONGS = ['ae', 'oe', 'au']
 CONSONANT_SPECIAL_WEIGHTS = {
     'h': 0,
     'x': 2,
@@ -44,8 +47,8 @@ class Words:
                                   r'\1',
                                   re.sub(r'[aeu]m ([aeiou])',
                                          r'\1',
-                                         re.sub(r'([aeu]m) est',
-                                                r'\1st',
+                                         re.sub(r'([aeu]m) e(st?)\b',
+                                                r'\1\2',
                                                 ' '.join(
                                                     re.split(
                                                         '\W+',
@@ -89,11 +92,20 @@ class Word:
 
     def to_syllables(self):
         syllables = []
-        for syl in self.vsp.finditer(self.chars):
-            newSyl = Syllable(syl.group(0))
-            newSyl.mark_final(False)
-            newSyl.mark_initial(False)
-            syllables.append(newSyl)
+        if self.chars in SPECIALS_long:
+            syl = Syllable(self.chars)
+            syllables.append(syl)
+        else:
+            chars = self.chars
+            if re.match(r'sua[dsv]', chars):
+                syllables.append(Syllable('sua'))
+                chars = self.chars.lstrip('sua')
+
+            for syl in self.vsp.finditer(chars):
+                newSyl = Syllable(syl.group(0))
+                newSyl.mark_final(False)
+                newSyl.mark_initial(False)
+                syllables.append(newSyl)
 
         max_pos = len(syllables) - 1
         for pos, syl in enumerate(syllables):
@@ -122,22 +134,22 @@ class SyllabifiedLine:
             # affected by the next syllable
             if pos < len(self.syllables) - 1:
                 next_syl = self.syllables[pos + 1]
-            # Handle elision
-            if syl.is_final():
-                if next_syl.chars[0] in VOWELS or (
-                        next_syl.chars[0] == 'h'
-                        and next_syl.chars[1] in VOWELS):
-                    if syl.chars[-1] in VOWELS or (
-                                syl.chars[-1] == 'm'
-                                and syl.chars[-2] in VOWELS):
-                        syl.set_zero_weight()
-                        continue
+                # Handle elision
+                if syl.is_final():
+                    if next_syl.chars[0] in VOWELS or (
+                            next_syl.chars[0] == 'h'
+                            and next_syl.chars[1] in VOWELS):
+                        if syl.chars[-1] in VOWELS or (
+                                    syl.chars[-1] == 'm'
+                                    and syl.chars[-2] in VOWELS):
+                            syl.set_zero_weight()
+                            continue
 
-            # Handle stop-liquid sequence across syllable boundary
-            if syl.chars[-1] in STOPS and next_syl.chars[0] in LIQUIDS:
-                syl.add_coda_weight(.5)
-            else:
-                syl.add_coda_weight(self.syllables[pos + 1].onset_weight())
+                # Handle stop-liquid sequence across syllable boundary
+                if syl.chars[-1] in STOPS and next_syl.chars[0] in LIQUIDS:
+                    syl.add_coda_weight(.5)
+                else:
+                    syl.add_coda_weight(self.syllables[pos + 1].onset_weight())
 
     def syllable_count(self):
         return len(self.syllables)

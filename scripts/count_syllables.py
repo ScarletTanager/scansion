@@ -45,6 +45,8 @@ def main():
     for f in os.listdir(chapters_dir):
         w = Words('/'.join([chapters_dir, f]))
         total_syllables = 0
+        total_definite_longs = 0
+        # Iterate and build the base dataset
         for line in w.lines():
             syls = []
             for word in line:
@@ -54,13 +56,16 @@ def main():
                 except IndexError:
                     print('Unable to syllabify \"{}\", skipping'.format(word.chars))
             total_syllables += len(syls)
+            sl = SyllabifiedLine(syls)
+            for syl in sl.syllables:
+                if syl.coda_weight() > 1 or syl.nucleus_weight() > 1:
+                    total_definite_longs += 1
 
         syls_per_line = total_syllables / len(w.lines())
-        print('Processing complete for file {}, syllables per line is {}\n'.format(
-            f, syls_per_line))
+        definite_longs_per_line = total_definite_longs / len(w.lines())
         try:
             idx = int(f.removesuffix('.txt'))
-            data.append([idx, f, syls_per_line])
+            data.append([idx, f, syls_per_line, definite_longs_per_line])
         except ValueError:
             print('Unable to extract index from {}\n'.format(f))
 
@@ -69,10 +74,11 @@ def main():
     print("Writing data to ", data_file)
     with open(data_file, "w") as d:
         for entry in data:
-            d.write('{},{},{}\n'.format(
+            d.write('{},{},{},{}\n'.format(
                 entry[0],
                 entry[1],
-                entry[2]
+                entry[2],
+                entry[3]
             ))
 
     return 0

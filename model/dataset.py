@@ -60,7 +60,7 @@ def load_latin_scansion_dataset(data_file_name, target_file_name):
 def load_latin_meter_dataset(data_file_name, target_file_name):
     dataset = Bunch(
         name='Latin Dataset for Metric Classification',
-        feature_names=['syllable_count'],
+        feature_names=['syllable_count', 'definite_long_count'],
         target_names=[
             'Hendecasyllabics',
             'Dactyllic Hexameter',
@@ -79,13 +79,14 @@ def load_latin_meter_dataset(data_file_name, target_file_name):
     with open(data_file_name) as f:
         for line in f:
             feature_vals = line.strip().split(',')
-            if len(feature_vals) != 3:
+            if len(feature_vals) != 4:
                 # Skip the line silently for now
                 data_rows_skipped += 1
                 continue
             try:
                 data.append([
-                    float(feature_vals[2])
+                    float(feature_vals[2]),
+                    float(feature_vals[3])
                 ])
                 raw.append([
                     int(feature_vals[0]),
