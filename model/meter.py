@@ -30,6 +30,28 @@ class BaseMeter:
             patterns.append(_flatten(raw))
         return patterns
 
+    # Attempts to match the line to one or more candidate patterns
+    # of the specific meter.
+    def candidates(self, line, strict=True):
+        # Line must be a list of syllables marked as one of
+        # 0 (unknown), 1 (short), or 2 (long)
+        candidates = []
+        for p in self.patterns():
+            for pos, syl in enumerate(line):
+                if strict:
+                    if syl > 0 and syl != p[pos]:
+                        break
+                else:
+                    # In non-strict searching, we allow for a syllable which
+                    # we preliminarily scanned as short, but the pattern has
+                    # a long, because sometimes syllables are long "because the
+                    # meter requires it."
+                    if syl > p[pos]:
+                        break
+            else:
+                candidates.append(p)
+        return candidates
+
 
 class DactyllicHexameter(BaseMeter):
     def __init__(self):
