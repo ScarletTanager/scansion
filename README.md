@@ -61,6 +61,43 @@ So we can use the meter as a template input to the model when classifying each s
 
 If we cannot scan the poem to fit the meter we believe to have been used, that will be a sign that we have misidentified the meter.
 
+### Metric Best Fit
+
+My current approach hinges on an algorithm I would call "Metric Best Fit":
+
+```
+1 for line L in poem P
+2   elide L
+3   syllabify L
+4   store L.syllable_count
+5   mark each definite long syllable
+6 apply model to identify highest likelihood meter M for P
+7 for line L in poem P
+8   filter templates by L.syllable_count into template set TS
+9   for each template T in TS
+10    if AND(L, T) == 0  # Likely an iterative operation here
+11      remove T from TS
+12  if TS.length == 0
+13    repeat from line 7 with next likeliest meter
+```
+
+The goal at this point is not to scan each line correctly but to arrive at a relatively sure identification of the poem's meter.  My assumption at this point is that, having identified
+a best match from among the candidate meters, we can AND each of that meter's templates for each line, then see if, by scanning the unmarked syllables, we can produce a match to one or
+more templates.  The ideal situation would be if one and only one template (within the same meter) matches each line of a given poem - were that to be the case, we would have successfully
+scanned the poem without having to do any more than the absolute minimum of actual scansion (syllabification/elision/marking of definite longs).  But that is highly unlikely, so I anticipate
+having to choose from among multiple templates for any one line.
+
+I have not yet really worked on the algorithm for template selection from among a set, but I anticipate it being along the lines of the following (I assume that we have already computed
+a template set `TS` for each line `L`, which I refer to as `L.TS` in the pseudo-code):
+
+```
+1 for line L in poem P
+2   for each template T in L.TS
+3     mark syllables in L according to T
+4     check for obvious conflicts  # E.g. matching the template requires marking a syllable we know to be long by nature as short, etc.
+```
+
+
 ## Syllabic boundaries
 
 Latin orthography can make identifying syllabic boundaries problematic - for example, some texts may use `i` and `u` for `j` (consonantal /y/)
