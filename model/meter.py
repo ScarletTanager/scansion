@@ -37,9 +37,12 @@ class BaseMeter:
         # 0 (unknown), 1 (short), or 2 (long)
         candidates = []
         for p in self.patterns():
+            if len(p) != len(line):
+                continue
             for pos, syl in enumerate(line):
                 if strict:
                     if syl > 0 and syl != p[pos]:
+                        print('Syllable at position {} is {}, expected {}'.format(pos, syl, p[pos]))
                         break
                 else:
                     # In non-strict searching, we allow for a syllable which
@@ -47,8 +50,10 @@ class BaseMeter:
                     # a long, because sometimes syllables are long "because the
                     # meter requires it."
                     if syl > p[pos]:
+                        print('Syllable at position {} is long, should be short'.format(pos))
                         break
             else:
+                print('Pattern: {}'.format(p))
                 candidates.append(p)
         return candidates
 
