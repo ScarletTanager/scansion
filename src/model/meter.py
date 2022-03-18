@@ -1,5 +1,9 @@
 import itertools
 
+# Structural representations of the types of feet found
+# across the various meters.
+# 2 represents a long syllable, 1 a short one.
+
 DACTYL = [2, 1, 1]
 SPONDEE = [2, 2]
 TROCHEE = [2, 1]
@@ -18,6 +22,12 @@ def _flatten(p):
         for s in f:
             syls.append(s)
     return syls
+
+#
+# Below this point you will find class definitions for meters.
+# This module should not contain any class which does not
+# represent a meter.
+#
 
 
 class BaseMeter:
