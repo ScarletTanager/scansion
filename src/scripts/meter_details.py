@@ -35,13 +35,15 @@ def get_meter(meter_name):
               callback=list_meters)
 @click.option('-n', '--meter-name', help='Show details for specified meter',
               type=click.Choice(__getmeters().keys(), case_sensitive=False))
-def main(meter_name):
+@click.option('-c', '--show-syllable-count', help='Show syllable count for each pattern in meter',
+              is_flag=True)
+def main(meter_name, show_syllable_count):
     """Get details about available/known meters"""
 
     click.echo("Meter: {}".format(meter_name))
     click.echo("")
     for p in get_meter(meter_name).patterns():
-        click.echo(p)
+        click.echo('{}{:>30}'.format(p, " Syllable count: {}".format(len(p)) if show_syllable_count else ""))
 
 if __name__ == "__main__":
     exit(main())
