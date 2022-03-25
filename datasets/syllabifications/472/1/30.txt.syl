@@ -1,0 +1,48 @@
+al      fe      nim     me      mor     at      quu     na      ni      mis     fal     se      so      da      li      bus    
+VC      CV      CVC     CV      CVC     VC      CV      CV      CV      CVC     CVC     CV      CV      CV      CV      CVC    
+I                                   F   I                                   F   I           F   I                           F  
+1   2   1   1   1   2   1   1   1   1   1   2   1   1   1   1   1   1   1   2   1   2   1   1   1   1   1   1   1   1   1   1  
+jam     te      nil     mi      se      ret     du      re      tu      i       dul     cis     a       mi      cu      li     
+CVC     CV      CVC     CV      CV      CVC     CV      CV      CV      V       CVC     CVC     V       CV      CV      CV     
+I   F   I   F   I   F   I                   F   I           F   I           F   I           F   I                           F  
+1   2   1   1   1   2   1   1   1   1   1   2   1   1   1   1   1   0   1   1   1   2   1   1   1   1   1   1   1   1   1   0  
+jam     me      pro     de      re      jam     non     du      bi      tas     fal     le      re      per     fi      de     
+CVC     CV      CCV     CV      CV      CVC     CVC     CV      CV      CVC     CVC     CV      CV      CVC     CV      CV     
+I   F   I   F   I                   F   I   F   I   F   I                   F   I                   F   I                   F  
+1   2   1   1.5 1   1   1   1   1   1   1   2   1   2   1   1   1   1   1   2   1   2   1   1   1   1   1   2   1   1   1   0  
+num     fac     tim     pi      a       fal     la      cum     ho      mi      num     cae     li      co      lis     pla     cent   
+CVC     CVC     CVC     CV      V       CVC     CV      CVC     CV      CV      CVC     CVV     CV      CV      CVC     CCV     CVCC   
+I   F   I                           F   I                   F   I                   F   I                           F   I           F  
+1   2   1   2   1   2   1   0   1   1   1   2   1   1   0   0   1   1   1   1   1   2   2   1   1   1   1   1   1   2.5 1   1   1   2  
+cum     tu      neg     le      gis     ac      me      mi      se      rum     de      se      ris     in      ma      lis    
+CVC     CV      CVC     CV      CVC     VC      CV      CV      CV      CVC     CV      CV      CVC     VC      CV      CVC    
+I   F   I   F   I                   F   I   F   I   F   I                   F   I                   F   I   F   I           F  
+1   2   1   1   1   1.5 1   1   1   1   1   2   1   1   1   1   1   1   1   2   1   1   1   1   1   1   1   2   1   1   1   1  
+e       he      u       quid    fa      ci      ant     dic     ho      mi      nes     cu      iv      ha      be      ant     fi      dem    
+V       CV      V       CVC     CV      CV      VCC     CVC     CV      CV      CVC     CV      VC      CV      CV      VCC     CV      CVC    
+I                   F   I   F   I                   F   I   F   I                   F   I                                   F   I           F  
+1   0   1   0   1   1   1   2   1   1   1   0   1   3   1   1   1   1   1   1   1   2   1   0   1   1   1   1   1   0   1   3   1   1   1   1  
+cer     te      tu      te      ju      be      bas     a       ni      mam     tra     de      ri      ni      que     me     
+CVC     CV      CV      CV      CV      CV      CVC     V       CV      CVC     CCV     CV      CV      CV      CV      CV     
+I           F   I           F   I                   F   I                   F   I                                   F   I   F  
+1   2   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   2.5 1   1   1   1   1   1   1   1   1   1   1   0  
+in      du      cens    in      a       mo      rem     qua     si      tu      tom     ni      a       mi      fo      rent   
+VC      CV      CVCC    VC      V       CV      CVC     CV      CV      CV      CVC     CV      V       CV      CV      CVCC   
+I                   F   I   F   I                   F   I           F   I                           F   I   F   I           F  
+1   2   1   1   1   2   1   1   1   1   1   1   1   2   1   1   1   1   1   1   1   2   1   0   1   1   1   1   1   1   1   2  
+i       dem     nunc    ret     ra      his     tac     tu      a       dic     tom     ni      a       fac     ta      que    
+V       CVC     CVCC    CVC     CV      CVC     CVC     CV      V       CVC     CVC     CV      V       CVC     CV      CV     
+I           F   I   F   I                   F   I   F   I           F   I                           F   I                   F  
+1   1   1   2   1   2.5 1   1.5 1   0   1   2   1   2   1   0   1   1   1   2   1   2   1   0   1   1   1   2   1   1   1   0  
+ven     tos     ir      ri      ta      fer     rac     ne      bu      las     ae      ri      as      si      nis    
+CVC     CVC     VC      CV      CV      CVC     CVC     CV      CV      CVC     VV      CV      VC      CV      CVC    
+I           F   I                   F   I           F   I                   F   I                   F   I           F  
+1   2   1   1   1   2   1   1   1   1   1   2   1   2   1   1   1   1   1   1   2   1   1   0   1   2   1   1   1   1  
+si      tob     li      tus     es      at      di      me      mi      ne      runt    me      mi      nit     fi      des    
+CV      CVC     CV      CVC     VC      VC      CV      CV      CV      CV      CVCC    CV      CV      CVC     CV      CVC    
+I   F   I                   F   I   F   I   F   I   F   I                           F   I                   F   I           F  
+1   1   1   1.5 1   1   1   1   1   1   1   2   1   1   1   1   1   1   1   1   1   3   1   1   1   1   1   2   1   1   1   1  
+quae    tut     pae     ni      te      at      post    mo      do      fac     ti      fa      ci      et      tu      i      
+CVV     CVC     CVV     CV      CV      VC      CVCC    CV      CV      CVC     CV      CV      CV      VC      CV      V      
+I   F   I   F   I                           F   I                   F   I           F   I                   F   I           F  
+2   1   1   2   2   1   1   1   1   0   1   2   1   3   1   1   1   1   1   2   1   1   1   1   1   0   1   2   1   0   1   0  

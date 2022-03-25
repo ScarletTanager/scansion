@@ -1,0 +1,96 @@
+quis    hoc     po      test    vi      de      re      quis    po      test    pa      ti     
+CVC     CVC     CV      CVCC    CV      CV      CV      CVC     CV      CVCC    CV      CV     
+I   F   I   F   I           F   I                   F   I   F   I           F   I           F  
+1   1   1   2   1   1   1   3   1   1   1   1   1   1   1   2   1   1   1   3   1   1   1   0  
+ni      sim     pu      di      cus     et      vo      rax     et      a       le      o      
+CV      CVC     CV      CV      CVC     VC      CV      CVC     VC      V       CV      V      
+I                                   F   I   F   I           F   I   F   I                   F  
+1   1   1   2   1   1   1   1   1   1   1   2   1   1   1   2   1   1   1   1   1   0   1   0  
+ma      mur     ram     ha      be      re      quod    co      ma      ta      gal     li      a      
+CV      CVC     CVC     CV      CV      CV      CVC     CV      CV      CV      CVC     CV      V      
+I                   F   I                   F   I   F   I                   F   I                   F  
+1   1   1   2   0   0   1   1   1   1   1   1   1   2   1   1   1   1   1   1   1   2   1   0   1   0  
+ha      be      bat     an      tet     ul      ti      ma      bri     tan     ni      a      
+CV      CV      CVC     VC      CVC     VC      CV      CV      CCV     CVC     CV      V      
+I                   F   I           F   I                   F   I                           F  
+1   1   1   1   1   1   1   2   1   1   1   2   1   1   1   1.5 1   1   1   2   1   0   1   0  
+ci      nae     de      ro      mul     hoc     vi      de      bis     et      fe      res    
+CV      CVV     CV      CV      CVC     CVC     CV      CV      CVC     VC      CV      CVC    
+I                   F   I                   F   I                   F   I   F   I           F  
+1   1   2   1   1   1   1   1   1   1   1   2   1   1   1   1   1   1   1   2   1   1   1   1  
+et      il      le      nunc    su      per     bus     et      su      perf    lu      ens    
+VC      VC      CV      CVCC    CV      CVC     CVC     VC      CV      CVCC    CV      VCC    
+I   F   I           F   I   F   I                   F   I   F   I                           F  
+1   1   1   2   1   1   1   3   1   1   1   2   1   1   1   2   1   1   1   3   1   0   1   2  
+pe      ram     bu      la      bit     om      ni      um      cu      bi      li      a      
+CV      CVC     CV      CV      CVC     VC      CV      VC      CV      CV      CV      V      
+I                                   F   I                   F   I                           F  
+1   1   1   2   1   1   1   1   1   1   1   2   1   0   1   2   1   1   1   1   1   0   1   0  
+ut      al      bu      lus     co      lum     bus     aut     a       do      ne      us     
+VC      VC      CV      CVC     CV      CVC     CVC     VVC     V       CV      CV      VC     
+I   F   I                   F   I                   F   I   F   I                           F  
+1   1   1   2   1   1   1   2   1   1   1   2   1   1   2   1   1   1   1   1   1   0   1   1  
+ci      nae     de      ro      mul     hoc     vi      de      bis     et      fe      res    
+CV      CVV     CV      CV      CVC     CVC     CV      CV      CVC     VC      CV      CVC    
+I                   F   I                   F   I                   F   I   F   I           F  
+1   1   2   1   1   1   1   1   1   1   1   2   1   1   1   1   1   1   1   2   1   1   1   1  
+es      im      pu      di      cus     et      vo      rax     et      a       le      o      
+VC      VC      CV      CV      CVC     VC      CV      CVC     VC      V       CV      V      
+I   F   I                           F   I   F   I           F   I   F   I                   F  
+1   1   1   2   1   1   1   1   1   1   1   2   1   1   1   2   1   1   1   1   1   0   1   0  
+e       o       ne      no      mi      nim     pe      ra      tor     u       ni      ce     
+V       V       CV      CV      CV      CVC     CV      CV      CVC     V       CV      CV     
+I                   F   I                                           F   I                   F  
+1   0   1   1   1   1   1   1   1   1   1   2   1   1   1   1   1   1   1   1   1   1   1   0  
+fu      is      tin     ul      ti      moc     ci      den     tis     in      su      la     
+CV      VC      CVC     VC      CV      CVC     CV      CVC     CVC     VC      CV      CV     
+I                   F   I                                           F   I                   F  
+1   0   1   2   1   1   1   2   1   1   1   2   1   1   1   2   1   1   1   2   1   1   1   0  
+ut      is      ta      vest    ra      dif     fu      tu      ta      men     tu      la     
+VC      VC      CV      CVCC    CV      CVC     CV      CV      CV      CVC     CV      CV     
+I   F   I           F   I           F   I                           F   I                   F  
+1   1   1   2   1   1   1   2.5 1   1   1   2   1   1   1   1   1   1   1   2   1   1   1   0  
+du      cen     ti      es      co      mes     set     aut     tre     cen     ti      es     
+CV      CVC     CV      VC      CV      CVC     CVC     VVC     CCV     CVC     CV      VC     
+I                           F   I                   F   I   F   I                           F  
+1   1   1   2   1   0   1   2   1   1   1   2   1   1   2   2.5 1   1   1   2   1   0   1   1  
+quid    est     a       lid     si      nist    ra      li      be      ra      li      tas    
+CVC     VCC     V       CVC     CV      CVCC    CV      CV      CV      CV      CV      CVC    
+I   F   I   F   I           F   I                   F   I                                   F  
+1   1   1   2   1   1   1   2   1   1   1   2.5 1   1   1   1   1   1   1   1   1   1   1   1  
+pa      rex     pat     ra      vit     an      pa      rum     hel     lu      a       tus     est    
+CV      CVC     CVC     CV      CVC     VC      CV      CVC     CVC     CV      V       CVC     VCC    
+I                                   F   I   F   I           F   I                           F   I   F  
+1   1   1   3   1   1.5 1   1   1   1   1   2   1   1   0   0   1   2   1   0   1   1   1   1   1   2  
+pa      ter     na      pri     ma      lan     ci      na      ta      sunt    bo      na     
+CV      CVC     CV      CCV     CV      CVC     CV      CV      CV      CVCC    CV      CV     
+I                   F   I           F   I                           F   I   F   I           F  
+1   1   1   2   1   1.5 1   1   1   1   1   2   1   1   1   1   1   1   1   3   1   1   1   0  
+se      cun     da      prae    da      pon     ti      cin     de      ter     ti      a      
+CV      CVC     CV      CCVV    CV      CVC     CV      CVC     CV      CVC     CV      V      
+I                   F   I           F   I                           F   I                   F  
+1   1   1   2   1   1.5 2   1   1   1   1   2   1   1   1   2   1   1   1   2   1   0   1   0  
+hi      be      ra      quam    scit    am      nis     au      ri      fer     ta      gus    
+CV      CV      CV      CVC     CCVC    VC      CVC     VV      CV      CVC     CV      CC     
+I                   F   I   F   I   F   I           F   I                   F   I           F  
+1   1   1   1   1   1   1   3   1   1   1   2   1   1   2   1   1   1   1   2   1   2   0   0  
+e       i       ne      gal     li      op      ti      met     bri     tan     ni      ae     
+V       V       CV      CVC     CV      VC      CV      CVC     CCV     CVC     CV      VV     
+I                   F   I                                   F   I                           F  
+1   0   1   1   1   1   1   2   1   0   1   2   1   1   1   2.5 1   1   1   2   1   0   2   0  
+quid    hunc    ma      lum     fo      ve      tis     aut     quid    hic     po      test   
+CVC     CVCC    CV      CVC     CV      CV      CVC     VVC     CVC     CVC     CV      CVCC   
+I   F   I   F   I           F   I                   F   I   F   I   F   I   F   I           F  
+1   1   1   3   1   1   1   2   1   1   1   1   1   1   2   2   1   1   1   2   1   1   1   2  
+ni      sunc    ta      de      vo      ra      re      pat     ri      mo      ni      a      
+CV      CVCC    CV      CV      CV      CV      CV      CVC     CV      CV      CV      V      
+I                   F   I                           F   I                                   F  
+1   1   1   3   1   1   1   1   1   1   1   1   1   1   1   1.5 1   1   1   1   1   0   1   0  
+e       o       ne      no      mi      nur     bis     o       pi      is      si      mi     
+V       V       CV      CV      CV      CVC     CVC     V       CV      VC      CV      CV     
+I                   F   I                           F   I   F   I                           F  
+1   0   1   1   1   1   1   1   1   1   1   2   1   1   1   1   1   0   1   2   1   1   1   0  
+so      cer     ge      ner     que     per     di      dis     tis     om      ni      a      
+CV      CVC     CV      CVC     CV      CVC     CV      CVC     CVC     VC      CV      V      
+I           F   I                   F   I                           F   I                   F  
+1   1   1   2   1   1   1   2   1   1   1   2   1   1   1   2   1   1   1   2   1   0   1   0  

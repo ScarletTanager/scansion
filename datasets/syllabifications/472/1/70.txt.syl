@@ -1,0 +1,16 @@
+nul     li      se      di      cit     mu      li      er      me      a       nu      be      re      mal     le     
+CVC     CV      CV      CV      CVC     CV      CV      VC      CV      V       CV      CV      CV      CVC     CV     
+I           F   I   F   I           F   I                   F   I           F   I                   F   I           F  
+1   2   1   1   1   1   1   1   1   2   1   1   1   0   1   2   1   0   1   1   1   1   1   1   1   1   1   2   1   0  
+quam    mi      hi      non     si      se      jup     pi      ter     ip      se      pe      tat    
+CVC     CV      CV      CVC     CV      CV      CVC     CV      CVC     VC      CV      CV      CVC    
+I   F   I           F   I   F   I   F   I   F   I                   F   I           F   I           F  
+1   2   1   0   1   1   1   2   1   1   1   1   1   2   1   1   1   1   1   2   1   1   1   1   1   1  
+di      cit     sed     mu      li      er      cu      pi      do      quod    di      cit     a       man     ti     
+CV      CVC     CVC     CV      CV      VC      CV      CV      CV      CVC     CV      CVC     V       CVC     CV     
+I           F   I   F   I                   F   I                   F   I   F   I           F   I                   F  
+1   1   1   2   1   2   1   1   1   0   1   2   1   1   1   1   1   1   1   2   1   1   1   1   1   1   1   2   1   0  
+in      ven     tet     ra      pi      da      scri    be      ro      por     tet     a       qua    
+VC      CVC     CVC     CV      CV      CV      CCCV    CV      CV      CVC     CVC     V       CV     
+I   F   I           F   I                   F   I                                   F   I           F  
+1   2   1   2   1   1.5 1   1   1   1   1   2.5 1   1   1   1   1   1   1   2   1   1   1   1   1   0  

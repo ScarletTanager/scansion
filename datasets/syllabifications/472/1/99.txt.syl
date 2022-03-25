@@ -1,0 +1,64 @@
+sur     ri      pu      i       ti      bi      dum     lu      dis     mel     li      te      ju      ven     ti     
+CVC     CV      CV      V       CV      CV      CVC     CV      CVC     CVC     CV      CV      CV      CVC     CV     
+I                           F   I           F   I   F   I           F   I                   F   I                   F  
+1   2   1   1   1   0   1   1   1   1   1   1   1   2   1   1   1   2   1   2   1   1   1   1   1   1   1   2   1   0  
+sa      vi      o       lum     dul     ci      dul     ci      us      amb     ro      si      a      
+CV      CV      V       CVC     CVC     CV      CVC     CV      VC      VCC     CV      CV      V      
+I                           F   I           F   I                   F   I                           F  
+1   1   1   0   1   1   1   2   1   2   1   1   1   2   1   0   1   1   1   2.5 1   1   1   0   1   0  
+ve      rid     non     im      pu      ne      tu      li      nam     quamp   li      us      ho      ram    
+CV      CVC     CVC     VC      CV      CV      CV      CV      CVC     CVCC    CV      VC      CV      CVC    
+I           F   I   F   I                   F   I           F   I                           F   I           F  
+1   1   1   2   1   1   1   2   1   1   1   1   1   1   1   1   1   2   1   2.5 1   0   1   1   1   1   1   1  
+suf     fi      xin     sum     ma      me      me      mi      nes     se      cru     ce     
+CVC     CV      CVC     CVC     CV      CV      CV      CV      CVC     CV      CCV     CV     
+I                   F   I           F   I   F   I                           F   I           F  
+1   2   1   2   1   2   1   2   1   1   1   1   1   1   1   1   1   2   1   1.5 1   1   1   0  
+dum     ti      bi      me      pur     go      nec     pos     sum     fle     ti      bus     ul      lis    
+CVC     CV      CV      CV      CVC     CV      CVC     CVC     CVC     CCV     CV      CVC     VC      CVC    
+I   F   I           F   I   F   I           F   I   F   I           F   I                   F   I           F  
+1   2   1   1   1   1   1   1   1   2   1   1   1   2   1   2   1   3   1   1   1   1   1   1   1   2   1   1  
+tan     til     lum     vest    rae     de      me      re      sae     vi      ti      ae     
+CVC     CVC     CVC     CVCC    CVV     CV      CV      CV      CVV     CV      CV      VV     
+I                   F   I           F   I                   F   I                           F  
+1   2   1   2   1   2   1   2.5 2   1   1   1   1   1   1   1   2   1   1   1   1   0   2   0  
+nam     si      mul     id      fac     tumst   mul     tis     di      lu      ta      la      bel     la     
+CVC     CV      CVC     VC      CVC     CVCCC   CVC     CVC     CV      CV      CV      CV      CVC     CV     
+I   F   I           F   I   F   I           F   I           F   I                   F   I                   F  
+1   2   1   1   1   1   1   2   1   2   1   4   1   2   1   2   1   1   1   1   1   1   1   1   1   2   1   0  
+guttis  abs     ters    ti      mol     li      bus     ar      ti      cu      lis    
+CCCVC   VCC     CVCC    CV      CVC     CV      CVC     VC      CV      CV      CVC    
+I   F   I                   F   I                   F   I                           F  
+1   1   1   3   1   3   1   1   1   2   1   1   1   1   1   2   1   1   1   1   1   1  
+ne      quic    quam    nost    ro      cont    rac     tex     o       re      ma      ne      ret    
+CV      CVC     CVC     CVCC    CV      CVCC    CVC     CVC     V       CV      CV      CV      CVC    
+I   F   I           F   I           F   I                   F   I           F   I                   F  
+1   1   1   2   1   2   1   2.5 1   1   1   2.5 1   2   1   2   1   1   1   1   1   1   1   1   1   1  
+tam     quam    com     mic     tae     spur    ca      sa      li      va      lu      pae    
+CVC     CVC     CVC     CVC     CVV     CCVC    CV      CV      CV      CV      CV      CVV    
+I           F   I                   F   I           F   I                   F   I           F  
+1   2   1   2   1   2   1   2   2   2   1   2   1   1   1   1   1   1   1   1   1   1   2   0  
+prae    te      re      in      fes     to      mi      se      rum     me      tra     de      ra      mo      ri     
+CCVV    CV      CV      VC      CVC     CV      CV      CV      CVC     CV      CCV     CV      CV      CV      CV     
+I                                           F   I                   F   I   F   I                                   F  
+2   1   1   1   1   0   1   2   1   2   1   1   1   1   1   1   1   2   1   1.5 1   1   1   1   1   1   1   1   1   0  
+non     ces     sas     tom     ni      quexc   ru      ci      a       re      mo      do     
+CVC     CVC     CVC     CVC     CV      CVCC    CV      CV      V       CV      CV      CV     
+I   F   I                                                                   F   I           F  
+1   2   1   2   1   2   1   2   1   1   1   3.5 1   1   1   0   1   1   1   1   1   1   1   0  
+ut      mex     amb     ro      si      a       mu      ta      tum     jam     fo      ret     il      lud    
+VC      CVC     VCC     CV      CV      V       CV      CV      CVC     CVC     CV      CVC     VC      CVC    
+I   F   I   F   I                           F   I                   F   I   F   I           F   I           F  
+1   2   1   2   1   2.5 1   1   1   0   1   1   1   1   1   1   1   2   1   2   1   1   1   1   1   2   1   1  
+sa      vi      o       lum     tris    ti      tris    ti      us      el      le      bo      ro     
+CV      CV      V       CVC     CCVC    CV      CCVC    CV      VC      VC      CV      CV      CV     
+I                           F   I           F   I                   F   I                           F  
+1   1   1   0   1   1   1   2.5 1   2   1   1.5 1   2   1   0   1   1   1   2   1   1   1   1   1   0  
+quam    quo     ni      am      poe     nam     mi      se      ro      pro     po      nis     a       mo      ri     
+CVC     CV      CV      VC      CVV     CVC     CV      CV      CV      CCV     CV      CVC     V       CV      CV     
+I   F   I                   F   I           F   I                   F   I                   F   I                   F  
+1   2   1   1   1   0   1   2   2   1   1   2   1   1   1   1   1   1.5 1   1   1   1   1   1   1   1   1   1   1   0  
+num     quam    jam     post    hac     ba      si      a       sur     ri      pi      am     
+CVC     CVC     CVC     CVCC    CVC     CV      CV      V       CVC     CV      CV      VC     
+I           F   I   F   I           F   I                   F   I                           F  
+1   2   1   2   1   2   1   2   1   2   1   1   1   0   1   1   1   2   1   1   1   0   1   1  

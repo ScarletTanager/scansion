@@ -1,5 +1,11 @@
 import tokenize
 
+#
+# Text: a tokenized (by word) representation of a text
+#
+# Must be instantiated from a type implementing readline(), such
+# as a file
+#
 
 class Text:
     def __init__(self, data):

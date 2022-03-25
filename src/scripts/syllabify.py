@@ -1,4 +1,4 @@
-import argparse
+import click
 import os
 import paths
 from datetime import date
@@ -53,44 +53,19 @@ def write_output(syllabified_lines, output_file, scan=False):
                         lp,
                         rlp))
 
-
-def main():
+@click.command()
+@click.option('-a', '--author-index', help='Author index')
+@click.option('-w', '--work-index', help='Work index')
+@click.option('-c', '--chapter-index', help='Chapter index')
+@click.option('-f', '--input-file', help='Local file to process')
+@click.option('-o', '--output-file', help='Destination file for output')
+@click.option('-s', '--scan', help='Attempt scansion', is_flag=True)
+@click.option('-d', '--directory', help='Process directory contents', is_flag=True)
+def main(author_index, work_index, chapter_index, input_file, output_file, scan, directory):
+    """Process and syllabify/scan text(s)"""
     paths.add_repo_paths()
 
-    parser = argparse.ArgumentParser(
-        description='Syllabify latin texts',
-        formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument('-a', '--author-index',
-                        required=False, help='Author index')
-    parser.add_argument('-w', '--work-index',
-                        required=False, help='Work index')
-    parser.add_argument('-c', '--chapter-index',
-                        required=False, help='Chapter index')
-    parser.add_argument('-f', '--input-file',
-                        required=False, help='Local file to process')
-    parser.add_argument('-o', '--output-file',
-                        required=False, help='Destination file for output')
-    parser.add_argument('-s', '--scan', choices=['true', 'false', 't', 'f'],
-                        required=False, help='Attempt scansion')
-    parser.add_argument('-d', '--directory', choices=['true', 'false', 't', 'f'],
-                        required=False, help='Process directory contents')
-
-    args = parser.parse_args()
-
-    # Process arguments related to the work to be downloaded
-    chapter_index = args.chapter_index if args.chapter_index else os.environ.get(
-        'JOB_INDEX')
-    author_index = args.author_index if args.author_index else os.environ.get(
-        'AUTHOR_INDEX')
-    work_index = args.work_index if args.work_index else os.environ.get(
-        'WORK_INDEX')
-
-    if args.scan in ['t', 'true']:
-        scan = True
-    else:
-        scan = False
-
-    if args.directory:
+    if directory:
         chapters_dir = '/'.join(
             [
                 'texts/latin',
@@ -107,8 +82,8 @@ def main():
                     f + '.syl'
                 ]), scan)
     else:
-        syllabified_lines = syllabify_file(args.input_file)
-        write_output(syllabified_lines, args.output_file, scan)
+        syllabified_lines = syllabify_file(input_file)
+        write_output(syllabified_lines, output_file, scan)
 
     return 0
 

@@ -1,0 +1,76 @@
+mi      ser     ca      tul     le      de      si      nas     i       nep     ti      re     
+CV      CVC     CV      CVC     CV      CV      CV      CVC     V       CVC     CV      CV     
+I           F   I                   F   I                   F   I                           F  
+1   1   1   2   1   1   1   2   1   1   1   1   1   1   1   1   1   1   1   2   1   1   1   0  
+et      quod    vi      des     pe      ris     se      per     di      tum     du      cas    
+VC      CVC     CV      CVC     CV      CVC     CV      CVC     CV      CVC     CV      CVC    
+I   F   I   F   I           F   I                   F   I                   F   I           F  
+1   2   1   2   1   1   1   2   1   1   1   2   1   1   1   2   1   1   1   2   1   1   1   1  
+ful     se      re      quon    dam     can     di      di      ti      bi      so      les    
+CVC     CV      CV      CVC     CVC     CVC     CV      CV      CV      CV      CV      CVC    
+I                   F   I           F   I                   F   I           F   I           F  
+1   2   1   1   1   1   1   2   1   2   1   2   1   1   1   1   1   1   1   1   1   1   1   1  
+cum     ven     ti      ta      bas     quo     pu      el      la      du      ce      bat    
+CVC     CVC     CV      CV      CVC     CV      CV      VC      CV      CV      CV      CVC    
+I   F   I                           F   I   F   I                   F   I                   F  
+1   2   1   2   1   1   1   1   1   2   1   1   1   0   1   2   1   1   1   1   1   1   1   1  
+a       ma      ta      no      bis     quan    ta      ma      bi      tur     nul     la     
+V       CV      CV      CV      CVC     CVC     CV      CV      CV      CVC     CVC     CV     
+I                   F   I           F   I                                   F   I           F  
+1   1   1   1   1   1   1   1   1   2   1   2   1   1   1   1   1   1   1   2   1   2   1   0  
+i       bil     la      mul     ta      tum     jo      co      sa      fi      e       bant   
+V       CVC     CV      CVC     CV      CVC     CV      CV      CV      CV      V       CVCC   
+I                   F   I           F   I   F   I                   F   I                   F  
+1   1   1   2   1   1   1   2   1   1   1   2   1   1   1   1   1   1   1   0   1   1   1   2  
+quae    tu      vo      le      bas     nec     pu      el      la      no      le      bat    
+CVV     CV      CV      CV      CVC     CVC     CV      VC      CV      CV      CV      CVC    
+I   F   I   F   I                   F   I   F   I                   F   I                   F  
+2   1   1   1   1   1   1   1   1   2   1   2   1   0   1   2   1   1   1   1   1   1   1   1  
+ful     se      re      ve      re      can     di      di      ti      bi      so      les    
+CVC     CV      CV      CV      CV      CVC     CV      CV      CV      CV      CV      CVC    
+I                   F   I           F   I                   F   I           F   I           F  
+1   2   1   1   1   1   1   1   1   1   1   2   1   1   1   1   1   1   1   1   1   1   1   1  
+nunc    jil     la      non     vult    tu      quo     quim    po      tens    no      li     
+CVCC    CVC     CV      CVC     CVCC    CV      CV      CVC     CV      CVCC    CV      CV     
+I   F   I           F   I   F   I   F   I   F   I                           F   I           F  
+1   3   1   2   1   1   1   2   1   3   1   1   1   1   1   2   1   1   1   3   1   1   1   0  
+nec     quae    fu      git     sec     ta      re      nec     mi      ser     vi      ve     
+CVC     CVV     CV      CVC     CVC     CV      CV      CVC     CV      CVC     CV      CV     
+I   F   I   F   I           F   I                   F   I   F   I           F   I           F  
+1   2   2   1   1   1   1   2   1   2   1   1   1   1   1   2   1   1   1   2   1   1   1   0  
+sed     obs     ti      na      ta      men     te      per     fer     ob      du      ra     
+CVC     VCC     CV      CV      CV      CVC     CV      CVC     CVC     VC      CV      CV     
+I   F   I                           F   I           F   I           F   I                   F  
+1   1   1   3   1   1   1   1   1   1   1   2   1   1   1   2   1   1   1   2   1   1   1   0  
+va      le      pu      el      la      jam     ca      tul     lus     ob      du      rat    
+CV      CV      CV      VC      CV      CVC     CV      CVC     CVC     VC      CV      CVC    
+I           F   I                   F   I   F   I                   F   I                   F  
+1   1   1   1   1   0   1   2   1   1   1   2   1   1   1   2   1   1   1   2   1   1   1   1  
+nec     te      re      qui     ret     nec     ro      ga      bit     in      vi      tam    
+CVC     CV      CV      CV      CVC     CVC     CV      CV      CVC     VC      CV      CVC    
+I   F   I   F   I                   F   I   F   I                   F   I                   F  
+1   2   1   1   1   1   1   1   1   2   1   1.5 1   1   1   1   1   1   1   2   1   1   1   1  
+at      tu      do      le      bis     cum     ro      ga      be      ris     nul     la     
+VC      CV      CV      CV      CVC     CVC     CV      CV      CV      CVC     CVC     CV     
+I   F   I   F   I                   F   I   F   I                           F   I           F  
+1   2   1   1   1   1   1   1   1   2   1   2   1   1   1   1   1   1   1   2   1   2   1   0  
+sce     les     ta      vae     te      quae    ti      bi      ma      net     vi      ta     
+CCV     CVC     CV      CVV     CV      CVV     CV      CV      CV      CVC     CV      CV     
+I                   F   I   F   I   F   I   F   I           F   I           F   I           F  
+1   1   1   2   1   1   2   1   1   1   2   1   1   1   1   1   1   1   1   2   1   1   1   0  
+quis    nunc    ta      di      bit     cui     vi      de      be      ris     bel     la     
+CVC     CVCC    CV      CV      CVC     CVV     CV      CV      CV      CVC     CVC     CV     
+I   F   I   F   I                   F   I   F   I                           F   I           F  
+1   2   1   3   1   1   1   1   1   2   2   1   1   1   1   1   1   1   1   2   1   2   1   0  
+quem    nunc    a       ma      bis     cu      i       us      es      se      di      ce      ris    
+CVC     CVCC    V       CV      CVC     CV      V       VC      VC      CV      CV      CV      CVC    
+I   F   I   F   I                   F   I                   F   I           F   I                   F  
+1   2   1   2   1   1   1   1   1   2   1   0   1   0   1   1   1   2   1   1   1   1   1   1   1   1  
+quem    ba      si      a       bis     cui     la      bel     la      mor     de      bis    
+CVC     CV      CV      V       CVC     CVV     CV      CVC     CV      CVC     CV      CVC    
+I   F   I                           F   I   F   I                   F   I                   F  
+1   2   1   1   1   0   1   1   1   2   2   1   1   1   1   2   1   1   1   2   1   1   1   1  
+at      tu      ca      tul     le      des     ti      na      tus     ob      du      ra     
+VC      CV      CV      CVC     CV      CVC     CV      CV      CVC     VC      CV      CV     
+I   F   I   F   I                   F   I                           F   I                   F  
+1   2   1   1   1   1   1   2   1   1   1   2   1   1   1   1   1   1   1   2   1   1   1   0  

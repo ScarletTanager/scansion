@@ -1,0 +1,40 @@
+no      lad     mi      ra      ri      qua     re      ti      bi      fe      mi      na      nul     la     
+CV      CVC     CV      CV      CV      CV      CV      CV      CV      CV      CV      CV      CVC     CV     
+I                                   F   I           F   I           F   I                   F   I           F  
+1   1   1   2   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   2   1   0  
+ru      fe      ve      lit     te      ne      rum     sup     po      su      is      se      fe      mur    
+CV      CV      CV      CVC     CV      CV      CVC     CVC     CV      CV      VC      CV      CV      CVC    
+I           F   I           F   I                   F   I                                   F   I           F  
+1   1   1   1   1   1   1   2   1   1   1   1   1   2   1   2   1   1   1   0   1   2   1   1   1   1   1   1  
+non     sil     lam     ra      rae     la      be      fac     tes     mu      ne      re      ves     tis    
+CVC     CVC     CVC     CV      CVV     CV      CV      CVC     CVC     CV      CV      CV      CVC     CVC    
+I   F   I           F   I           F   I                           F   I                   F   I           F  
+1   2   1   2   1   2   1   1   2   1   1   1   1   1   1   2   1   2   1   1   1   1   1   1   1   2   1   1  
+aut     per     lu      ci      du      li      de      li      ci      is      la      pi      dis    
+VVC     CVC     CV      CV      CV      CV      CV      CV      CV      VC      CV      CV      CVC    
+I   F   I                                   F   I                           F   I                   F  
+2   2   1   2   1   1   1   1   1   1   1   1   1   1   1   1   1   0   1   2   1   1   1   1   1   1  
+lae     dit     te      quae    dam     ma      la      fa      bu      la      qua     ti      bi      fer     tur    
+CVV     CVC     CV      CVV     CVC     CV      CV      CV      CV      CV      CV      CV      CV      CVC     CVC    
+I           F   I   F   I           F   I           F   I                   F   I   F   I           F   I           F  
+2   1   1   2   1   1   2   1   1   2   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   2   1   1  
+val     le      sub     a       la      rum     trux    ha      bi      ta      re      ca      per    
+CVC     CV      CVC     V       CV      CVC     CCVC    CV      CV      CV      CV      CV      CVC    
+I           F   I   F   I                   F   I   F   I                           F   I           F  
+1   2   1   1   1   1   1   1   1   1   1   2.5 1   2   1   1   1   1   1   1   1   1   1   1   1   1  
+hunc    me      tu      unt     om      nes     ne      que     mi      rum     nam     ma      la      val     dest   
+CVCC    CV      CV      VCC     VC      CVC     CV      CV      CV      CVC     CVC     CV      CV      CVC     CVCC   
+I   F   I                   F   I           F   I           F   I           F   I   F   I           F   I           F  
+1   3   1   1   1   0   1   2   1   2   1   2   1   1   1   1   1   1   1   2   1   2   1   1   1   1   1   2   1   2  
+bes     ti      a       nec     qui     cum     bel     la      pu      el      la      cu      bet    
+CVC     CV      V       CVC     CV      CVC     CVC     CV      CV      VC      CV      CV      CVC    
+I                   F   I   F   I           F   I           F   I                   F   I           F  
+1   2   1   0   1   1   1   2   1   1   1   2   1   2   1   1   1   0   1   2   1   1   1   1   1   1  
+qua     raut    cru     de      lem     na      so      rin     ter     fi      ce      pes     tem    
+CV      CVVC    CCV     CV      CVC     CV      CV      CVC     CVC     CV      CV      CVC     CVC    
+I           F   I                   F   I                                           F   I           F  
+1   1   2   2.5 1   1   1   1   1   2   1   1   1   1   1   2   1   2   1   1   1   1   1   2   1   1  
+aut     ad      mi      ra      ri      de      si      ne      cur     fu      gi      ant    
+VVC     VC      CV      CV      CV      CV      CV      CV      CVC     CV      CV      VCC    
+I   F   I                           F   I                   F   I   F   I                   F  
+2   1   1   2   1   1   1   1   1   1   1   1   1   1   1   1   1   2   1   1   1   0   1   2  

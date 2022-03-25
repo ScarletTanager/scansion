@@ -1,0 +1,72 @@
+lu      ge      to      ve      ne      res     cu      pi      di      nes     que    
+CV      CV      CV      CV      CV      CVC     CV      CV      CV      CVC     CV     
+I                   F   I                   F   I                                   F  
+1   1   1   1   1   1   1   1   1   1   1   2   1   1   1   1   1   1   1   2   1   0  
+et      quan    tumst   ho      mi      num     ve      nus     ti      o       rum    
+VC      CVC     CVCCC   CV      CV      CVC     CV      CVC     CV      V       CVC    
+I   F   I           F   I                   F   I                                   F  
+1   2   1   2   1   3   1   1   1   1   1   2   1   1   1   2   1   0   1   1   1   1  
+pas     ser     mor     tu      us      est     me      ae      pu      el      lae    
+CVC     CVC     CVC     CV      VC      VCC     CV      VV      CV      VC      CVV    
+I           F   I                   F   I   F   I           F   I                   F  
+1   2   1   2   1   2   1   0   1   1   1   3   1   0   2   1   1   0   1   2   2   0  
+pas     ser     de      li      ci      ae      me      ae      pu      el      lae    
+CVC     CVC     CV      CV      CV      VV      CV      VV      CV      VC      CVV    
+I           F   I                           F   I           F   I                   F  
+1   2   1   2   1   1   1   1   1   0   2   1   1   0   2   1   1   0   1   2   2   0  
+quem    plus    il      lo      cu      lis     su      is      a       ma      bat    
+CVC     CCVC    VC      CV      CV      CVC     CV      VC      V       CV      CVC    
+I   F   I   F   I                           F   I           F   I                   F  
+1   2.5 1   1   1   2   1   1   1   1   1   2   1   0   1   1   1   1   1   1   1   1  
+nam     mel     li      tus     e       rat     sua     mque    no      rat    
+CVC     CVC     CV      CVC     V       CVC     CVV     CCV     CV      CVC    
+I   F   I                   F   I           F   I           F   I           F  
+1   2   1   2   1   1   1   1   1   1   1   2   2   2   1   1   1   1   1   1  
+ip      sam     tam     be      ne      quam    pu      el      la      mat     rem    
+VC      CVC     CVC     CV      CV      CVC     CV      VC      CV      CVC     CVC    
+I           F   I   F   I           F   I   F   I                   F   I           F  
+1   2   1   2   1   2   1   1   1   1   1   2   1   0   1   2   1   1   1   1.5 1   1  
+nec     se      sa      gre     mi      il      li      us      mo      ve      bat    
+CVC     CV      CV      CCV     CV      VC      CV      VC      CV      CV      CVC    
+I   F   I           F   I                                   F   I                   F  
+1   2   1   1   1   1.5 1   1   1   0   1   2   1   0   1   2   1   1   1   1   1   1  
+sed     cir     cum     si      li      ens     mod     huc     mo      dil     luc    
+CVC     CVC     CVC     CV      CV      VCC     CVC     CVC     CV      CVC     CVC    
+I   F   I                                   F   I           F   I                   F  
+1   2   1   2   1   2   1   1   1   0   1   3   1   1   1   2   1   1   1   2   1   1  
+ad      so      lam     do      mi      nus     que     pi      pi      a       bat    
+VC      CV      CVC     CV      CV      CVC     CV      CV      CV      V       CVC    
+I   F   I           F   I                           F   I                           F  
+1   2   1   1   1   2   1   1   1   1   1   2   1   1   1   1   1   0   1   1   1   1  
+qui     nunc    it      per     i       ter     te      neb     ri      co      sum    
+CV      CVCC    VC      CVC     V       CVC     CV      CVC     CV      CV      CVC    
+I   F   I   F   I   F   I   F   I           F   I                                   F  
+1   1   1   2   1   2   1   1   1   1   1   2   1   1   1   1.5 1   1   1   1   1   1  
+il      luc     un      de      ne      gant    re      di      re      quem    quam   
+VC      CVC     VC      CV      CV      CVCC    CV      CV      CV      CVC     CVC    
+I           F   I           F   I           F   I                   F   I           F  
+1   2   1   1   1   2   1   1   1   1   1   2.5 1   1   1   1   1   1   1   2   1   1  
+at      vo      bis     ma      le      sit     ma      lae     te      neb     rae    
+VC      CV      CVC     CV      CV      CVC     CV      CVV     CV      CVC     CVV    
+I   F   I           F   I           F   I   F   I           F   I                   F  
+1   2   1   1   1   2   1   1   1   1   1   2   1   1   2   1   1   1   1   1.5 2   0  
+or      ci      quom    ni      a       bel     la      de      vo      ra      tis    
+VC      CV      CVC     CV      V       CVC     CV      CV      CV      CV      CVC    
+I           F   I                   F   I           F   I                           F  
+1   2   1   1   1   2   1   0   1   1   1   2   1   1   1   1   1   1   1   1   1   1  
+tam     bel     lum     mi      hi      pas     se      rabs    tu      lis     tis    
+CVC     CVC     CVC     CV      CV      CVC     CV      CVCC    CV      CVC     CVC    
+I   F   I           F   I           F   I                                           F  
+1   2   1   2   1   2   1   0   1   1   1   2   1   1   1   3   1   1   1   2   1   1  
+o       fac     tum     ma      le      quod    mi      sel     le      pas     ser    
+V       CVC     CVC     CV      CV      CVC     CV      CVC     CV      CVC     CVC    
+I   F   I           F   I           F   I   F   I                   F   I           F  
+1   1   1   2   1   2   1   1   1   1   1   2   1   1   1   2   1   1   1   2   1   1  
+tu      a       nunc    o       pe      ra      me      ae      pu      el      lae    
+CV      V       CVCC    V       CV      CV      CV      VV      CV      VC      CVV    
+I           F   I   F   I                   F   I           F   I                   F  
+1   0   1   1   1   2   1   1   1   1   1   1   1   0   2   1   1   0   1   2   2   0  
+flen    do      tur     gi      du      li      ru      bent    o       cel     li     
+CCVC    CV      CVC     CV      CV      CV      CV      CVCC    V       CVC     CV     
+I           F   I                           F   I           F   I                   F  
+1   2   1   1   1   2   1   1   1   1   1   1   1   1   1   2   1   1   1   2   1   0  

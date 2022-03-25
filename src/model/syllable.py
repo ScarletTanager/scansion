@@ -52,7 +52,7 @@ class Words:
                                                 ' '.join(
                                                     re.split(
                                                         '\W+',
-                                                        re.sub(r'[\'><)(,:.;!?]', '', l))))))
+                                                        re.sub(r'[\'><)(,:.;!?]', '', l.lower()))))))
                 self.wordlines.append([Word(n.strip())
                                        for n in textline.split()])
 
@@ -117,7 +117,6 @@ class Word:
 
 # SyllabifiedLine represents a single line decomposed into Syllable objects,
 # stored in order of occurrence within the line
-
 
 class SyllabifiedLine:
     def __init__(self, syllables):

@@ -70,7 +70,9 @@ def load_latin_meter_dataset(data_file_name, target_file_name):
             'Glyconic',
             'Pherecratean',
             'First Asclepiadean',
-            'Other'
+            'Other',
+            'Iambic Trimeter',
+            'Priapean'
         ]
     )
     data = []
